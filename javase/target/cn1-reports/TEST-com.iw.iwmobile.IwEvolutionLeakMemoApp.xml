@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" errors="0" skipped="0" tests="1" name="com.iw.iwmobile.IwEvolutionLeakMemoApp">
+<testcase classname="com.iw.iwmobile.MyFirstTest">
+<system-out>
+Test prepared for execution off the EDT
+</system-out>
+</testcase>
+</testsuite>

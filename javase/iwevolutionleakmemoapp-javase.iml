@@ -14,6 +14,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="iwevolutionleakmemoapp-common" />
+    <orderEntry type="module" module-name="iwevolutionleakmemoapp-CN1JSON" />
+    <orderEntry type="library" name="Maven: ATTACHED-JAR: com.iw.iwmobile:iwevolutionleakmemoapp-CN1JSON:common:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="iwevolutionleakmemoapp-AnimatedGifSupport" />
+    <orderEntry type="library" name="Maven: ATTACHED-JAR: com.iw.iwmobile:iwevolutionleakmemoapp-AnimatedGifSupport:common:1.0-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="iwevolutionleakmemoapp-common" scope="TEST" production-on-test="" />
     <orderEntry type="library" name="Maven: com.codenameone:codenameone-core:7.0.96" level="project" />
     <orderEntry type="library" name="Maven: com.codenameone:codenameone-javase:7.0.96" level="project" />

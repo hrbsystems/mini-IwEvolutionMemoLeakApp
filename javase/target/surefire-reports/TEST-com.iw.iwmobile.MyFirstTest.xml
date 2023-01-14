@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.iw.iwmobile.MyFirstTest" time="0.004" tests="0" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase/target/test-classes:/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase/target/classes:/home/helio/.m2/repository/com/iw/iwmobile/iwevolutionleakmemoapp-common/1.0-SNAPSHOT/iwevolutionleakmemoapp-common-1.0-SNAPSHOT.jar:/home/helio/.m2/repository/com/iw/iwmobile/iwevolutionleakmemoapp-CN1JSON/1.0-SNAPSHOT/iwevolutionleakmemoapp-CN1JSON-1.0-SNAPSHOT-common.jar:/home/helio/.m2/repository/com/iw/iwmobile/iwevolutionleakmemoapp-AnimatedGifSupport/1.0-SNAPSHOT/iwevolutionleakmemoapp-AnimatedGifSupport-1.0-SNAPSHOT-common.jar:/home/helio/.m2/repository/com/iw/iwmobile/iwevolutionleakmemoapp-common/1.0-SNAPSHOT/iwevolutionleakmemoapp-common-1.0-SNAPSHOT-tests.jar:/home/helio/.m2/repository/com/codenameone/codenameone-core/7.0.96/codenameone-core-7.0.96.jar:/home/helio/.m2/repository/com/codenameone/codenameone-javase/7.0.96/codenameone-javase-7.0.96.jar:/home/helio/.m2/repository/org/xerial/sqlite-jdbc/3.7.15-M1/sqlite-jdbc-3.7.15-M1.jar:/home/helio/.m2/repository/com/jhlabs/filters/2.0.235-1/filters-2.0.235-1.jar:"/>
+    <property name="java.vm.vendor" value="AdoptOpenJDK"/>
+    <property name="codename1.platform" value="javase"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
+    <property name="user.timezone" value=""/>
+    <property name="user.country.format" value="BR"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase/target/surefire/surefirebooter3854820344945119175.jar /home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase/target/surefire 2023-01-14T17-34-38_231-jvmRun1 surefire2692014716237151261tmp surefire_06626027058233362566tmp"/>
+    <property name="surefire.test.class.path" value="/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase/target/test-classes:/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase/target/classes:/home/helio/.m2/repository/com/iw/iwmobile/iwevolutionleakmemoapp-common/1.0-SNAPSHOT/iwevolutionleakmemoapp-common-1.0-SNAPSHOT.jar:/home/helio/.m2/repository/com/iw/iwmobile/iwevolutionleakmemoapp-CN1JSON/1.0-SNAPSHOT/iwevolutionleakmemoapp-CN1JSON-1.0-SNAPSHOT-common.jar:/home/helio/.m2/repository/com/iw/iwmobile/iwevolutionleakmemoapp-AnimatedGifSupport/1.0-SNAPSHOT/iwevolutionleakmemoapp-AnimatedGifSupport-1.0-SNAPSHOT-common.jar:/home/helio/.m2/repository/com/iw/iwmobile/iwevolutionleakmemoapp-common/1.0-SNAPSHOT/iwevolutionleakmemoapp-common-1.0-SNAPSHOT-tests.jar:/home/helio/.m2/repository/com/codenameone/codenameone-core/7.0.96/codenameone-core-7.0.96.jar:/home/helio/.m2/repository/com/codenameone/codenameone-javase/7.0.96/codenameone-javase-7.0.96.jar:/home/helio/.m2/repository/org/xerial/sqlite-jdbc/3.7.15-M1/sqlite-jdbc-3.7.15-M1.jar:/home/helio/.m2/repository/com/jhlabs/filters/2.0.235-1/filters-2.0.235-1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/helio"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre"/>
+    <property name="basedir" value="/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase/target/surefire/surefirebooter3854820344945119175.jar"/>
+    <property name="sun.boot.class.path" value="/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/resources.jar:/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/rt.jar:/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/sunrsasign.jar:/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/jsse.jar:/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/jce.jar:/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/charsets.jar:/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/jfr.jar:/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_282-b08"/>
+    <property name="user.name" value="helio"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-57-generic"/>
+    <property name="java.endorsed.dirs" value="/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/helio/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_282"/>
+    <property name="user.dir" value="/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/javase"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="user.language.format" value="pt"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="AdoptOpenJDK"/>
+    <property name="java.vm.version" value="25.282-b08"/>
+    <property name="java.ext.dirs" value="/home/helio/.sdkman/candidates/java/8.0.282.hs-adpt/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+</testsuite>

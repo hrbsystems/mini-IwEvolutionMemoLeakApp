@@ -33,6 +33,13 @@
   <type>pom</type>
 </dependency>
 
+<dependency>
+  <artifactId>iwevolutionleakmemoapp-CN1Webserver</artifactId>
+  <groupId>com.iw.iwmobile</groupId>
+  <version>1.0-SNAPSHOT</version>
+  <type>pom</type>
+</dependency>
+
 <!-- INJECT DEPENDENCIES -->
     </dependencies>
 

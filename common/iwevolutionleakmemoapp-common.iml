@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/AnimatedGifSupport" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/CN1JSON" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/CN1Webserver" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -17,5 +18,7 @@
     <orderEntry type="library" name="Maven: ATTACHED-JAR: com.iw.iwmobile:iwevolutionleakmemoapp-CN1JSON:common:1.0-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="iwevolutionleakmemoapp-AnimatedGifSupport" />
     <orderEntry type="library" name="Maven: ATTACHED-JAR: com.iw.iwmobile:iwevolutionleakmemoapp-AnimatedGifSupport:common:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="iwevolutionleakmemoapp-CN1Webserver" />
+    <orderEntry type="library" name="Maven: ATTACHED-JAR: com.iw.iwmobile:iwevolutionleakmemoapp-CN1Webserver:common:1.0-SNAPSHOT" level="project" />
   </component>
 </module>

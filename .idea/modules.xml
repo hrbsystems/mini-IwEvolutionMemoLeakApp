@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/iwevolutionleakmemoapp.iml" filepath="$PROJECT_DIR$/.idea/iwevolutionleakmemoapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/cn1libs/AnimatedGifSupport/iwevolutionleakmemoapp-AnimatedGifSupport.iml" filepath="$PROJECT_DIR$/cn1libs/AnimatedGifSupport/iwevolutionleakmemoapp-AnimatedGifSupport.iml" />
       <module fileurl="file://$PROJECT_DIR$/cn1libs/CN1JSON/iwevolutionleakmemoapp-CN1JSON.iml" filepath="$PROJECT_DIR$/cn1libs/CN1JSON/iwevolutionleakmemoapp-CN1JSON.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cn1libs/CN1Webserver/iwevolutionleakmemoapp-CN1Webserver.iml" filepath="$PROJECT_DIR$/cn1libs/CN1Webserver/iwevolutionleakmemoapp-CN1Webserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/cn1libs/iwevolutionleakmemoapp-cn1libs.iml" filepath="$PROJECT_DIR$/cn1libs/iwevolutionleakmemoapp-cn1libs.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/iwevolutionleakmemoapp-common.iml" filepath="$PROJECT_DIR$/common/iwevolutionleakmemoapp-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/javase/iwevolutionleakmemoapp-javase.iml" filepath="$PROJECT_DIR$/javase/iwevolutionleakmemoapp-javase.iml" />

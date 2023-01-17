@@ -31,6 +31,7 @@ import com.codename1.ui.util.UIBuilder;
 import com.iw.iwmobile._fakelibs.StateMachine;
 import com.iw.iwmobile.comm.*;
 import com.iw.iwmobile.entities.*;
+import com.iw.iwmobile.extensions.evolution.IwFormEvolutionNavig;
 //import userclasses.StateMachine;
 
 import java.io.*;
@@ -201,6 +202,10 @@ public  class Brain implements IwConstantsInterface {
   public boolean isOfflineMode() {
     return false;
   }
+  public void setOfflineMode(boolean b) {
+    // here - do nothing
+  }
+
 
   public String scaleImage1(String sFilePath) {
     return "";
@@ -369,5 +374,19 @@ public  class Brain implements IwConstantsInterface {
     return null;
   }
 
+  private Form formEvolutionNavigInstance;
+  public void setFormEvolutionNavigInstance(Form f) {
+    this.formEvolutionNavigInstance = f;
+  }
+  public Form getFormEvolutionNavigInstance() {
+    return this.formEvolutionNavigInstance;
+  }
+  private Form formAddEvolutionInstance;
+  public void setFormAddEvolutionInstance(Form f) {
+    this.formAddEvolutionInstance = f;
+  }
+  public Form getFormAddEvolutionInstance() {
+    return this.formAddEvolutionInstance;
+  }
 
 }

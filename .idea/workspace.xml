@@ -6,7 +6,54 @@
   <component name="ChangeListManager">
     <list default="true" id="336d32c5-6f4b-4a8f-b637-9fea310958e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/3_getTemplateList.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/comm/IwServiceCaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/comm/IwServiceCaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/Green_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/Green_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-adicionar-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-adicionar-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-adicionar-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-adicionar-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-arrow-down.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-arrow-down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-arrow-reorder-123.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-arrow-reorder-123.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-arrow-up.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-arrow-up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-camera-helio-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-camera-helio-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-camera-off.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-camera-off.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-camera-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-camera-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-camera-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-camera-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-chamada-off.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-chamada-off.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-chamada-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-chamada-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-chamada-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-chamada-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-delete-off.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-delete-off.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-delete-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-delete-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-delete-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-delete-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-editar-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-editar-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-editar-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-editar-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-ficha_tecnica-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-ficha_tecnica-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-ficha_tecnica-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-ficha_tecnica-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-online-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-online-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-online.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-online.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-pesq_avancada-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-pesq_avancada-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-pesq_avancada-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-pesq_avancada-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-pesquisa-parametrizada-on-yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-pesquisa-parametrizada-on-yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-pesquisa-parametrizada-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-pesquisa-parametrizada-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-pesquisar-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-pesquisar-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-pesquisar-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-pesquisar-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-salvar-off.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-salvar-off.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-salvar-on-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-salvar-on-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-salvar-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-salvar-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone-undo.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone-undo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone_app-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone_app-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icone_app-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icone_app-03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icones-Map-Marker-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icones-Map-Marker-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icones-Map-Marker-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icones-Map-Marker-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icones-waze-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icones-waze-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02-icones-waze-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02-icones-waze-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_checkin_256.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_checkin_256.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_checkout_256.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_checkout_256.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_navigate_128x128.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_navigate_128x128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_navigate_72x72.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_navigate_72x72.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_settings_256x256.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_settings_256x256.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_settings_48x128.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_settings_48x128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_settings_red_256x256.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_settings_red_256x256.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_syncdata_128x128.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_syncdata_128x128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/images/iw02_icones_syncdata_32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/iw02_icones_syncdata_32x32.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +116,7 @@
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/entities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common/src/main/resources" />
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsons" />
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile" />
     </key>

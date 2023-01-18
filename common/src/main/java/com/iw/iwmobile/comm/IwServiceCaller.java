@@ -243,6 +243,12 @@ public class IwServiceCaller implements IwServiceCallerInterface {
     public void getEvolutions(ArrayList<Long> evolIdList, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
             new FakeGetEvolutions().execute(callback);
     }
+
+    @Override
+    public Map<String, MobRecordset> getEvolutions(ArrayList<Long> evolIdList) throws IwCommException {
+        return null;
+    }
+
     @Override
     public void getEvolutions(long idAdmission, long idTemplate, int regType, Date startDate, Date endDate, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
         new FakeGetEvolutions().execute(callback);

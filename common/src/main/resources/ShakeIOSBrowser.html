@@ -1,0 +1,351 @@
+<html>
+<head>
+    
+  </head>
+<body>
+<div ng-app="myApp" ng-controller="IwTemplateCtrl" >
+    <div style="font-size:16pt;line-height:100%;font-family:Arial;">
+      
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#F5F5F5">
+            <td width="18%"><img src="http://iw.iwsoftware.com.br:9093/IwEvaluation/GetImageServlet?PROFILE=dbIwHealth&ID=246" height="64" width="189" /></td>
+            <td align="center" bgcolor="#B9C0FF" width="82%"><div align="center"><font size="5"><strong>Acompanhamento de Feridas</strong></font></div></td>
+          </tr>
+        </table>
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<strong>Data da Consulta:</strong>&nbsp;<input maxlength="10" size="7" ng-model="variables.iwvar_eventdate" type="text" ><button ng-click="javaCall('iwcalendarlauncher', 'iwvar_eventdate')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/JCalendarColor16.gif" /></button>&nbsp;&nbsp;&nbsp;<strong>Hora Início:</strong>&nbsp;<input maxlength="5" size="4" ng-model="variables.iwvar_eventtime_ini" type="text" > &nbsp;&nbsp;&nbsp;&nbsp;<strong>Hora Término:&nbsp;</strong><input maxlength="5" size="4" ng-model="variables.iwvar_eventtime_end" type="text" ></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<strong>Paciente:</strong>&nbsp;<strong>Cecilio Almeida de Lima</strong>&nbsp;<strong>&nbsp;Sexo:&nbsp;Masculino</strong>&nbsp;&nbsp;<strong>Idade:</strong>&nbsp;<strong>2a 3m &nbsp;Nº Atend.:&nbsp;898&nbsp;&nbsp;</strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<strong>Motivo Atendimento:&nbsp;paciente paciente.
+paciente</strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<strong>Diagnóstico Principal:&nbsp; Infecc do trato urinario de localiz NE [N39.0] </strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<strong>Peso:&nbsp;70.0</strong>&nbsp;<strong>Altura:&nbsp;1.7</strong>&nbsp;</td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<strong>Escore NEAD:</strong>&nbsp;<select ng-model="variables.iwvar_rankinghc" iwmode="value" ><option value="0" selected>.</option><option value="10">S/ Indicação Intern. Domiciliar</option><option value="11">I.D. s/ plantão de enfermagem</option><option value="12">I.D. c/ até 6h de enfermagem</option><option value="13">I.D. c/ até 12h de enfermagem</option><option value="14">I.D. c/ até 24h de enfermagem</option><option value="16">Programação de Alta</option><option value="17">Manter com até 6 hs ou visitas </option><option value="18">Manter com até 12 hs</option><option value="19">Manter com mais de 12 hs</option></select></td>
+          </tr>
+        </table>
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#F5F5F5">
+            <td bgcolor="#B9C0FF"><b>Síntese do Quadro Clínico </b></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td width="68%"><div iwtextarea="true" ng-model="variables.iwvar_quadroclinico" ><button ng-click="javaCall('iwricheditorlauncher', 'iwvar_quadroclinico')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/icon_edit.png" />Editar</button></div><span ng-bind-html="variables.iwvar_quadroclinico" ></span></td>
+          </tr>
+        </table>
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2" bgcolor="#B9C0FF"><strong>Estado Geral </strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2">&nbsp;<strong>Aspecto:</strong>&nbsp;<select ng-model="variables.iwvar_aspecto" ><option value="0" selected  >.</option>
+<option value="1" >Bom</option>
+<option value="2" >Regular</option>
+<option value="3" >Mau</option>
+<option value="4" >Grave</option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2">&nbsp;<strong>Temperatura Axilar:</strong>&nbsp; <input maxlength="5" size="3" ng-model="variables.iwvar_temperatura" type="text" > °C&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;Pressão Arterial:</strong>&nbsp; <input maxlength="5" size="3" ng-model="variables.iwvar_pres_sistolica" type="text" > &nbsp;<strong>x</strong>&nbsp; <input maxlength="5" size="3" ng-model="variables.iwvar_pres_diastolica" type="text" > <strong>mmHg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2"><strong>&nbsp;Frequência Cardíaca:</strong>&nbsp;<input maxlength="5" size="3" ng-model="variables.iwvar_pulsoradial" type="text" > &nbsp;<strong>bpm</strong>&nbsp;&nbsp;&nbsp;<strong>Frequência Respiratória:</strong>&nbsp;<input maxlength="5" size="3" ng-model="variables.iwvar_freqrepiratoria" type="text" > &nbsp;<strong>ipm&nbsp;&nbsp;&nbsp;&nbsp;SO2: <input maxlength="5" ng-model="variables.iwvar_saturacao_o2" size="3" type="text" > &nbsp;%</strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2"><strong>&nbsp;Karnofsky:</strong>&nbsp;<select ng-model="variables.iwvar_karnofscky" iwmode="value" ><option value="0" selected>.</option><option value="100">100 % - Normal</option><option value="90">90 % - Desenvolve atividades normais</option><option value="80">80 % - Atividade normal</option><option value="70">70 % - Cuida de si mesmo</option><option value="60">60 % - Necessita de cuidados</option><option value="50">50 % - Requer assistência</option><option value="40">40 % - Inabilitado</option><option value="30">30 % - Severamente inabilitado</option><option value="20">20 % - Muito doente</option><option value="10">10 % - Moribundo</option><option value="1">0 % - Morto</option></select></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td valign="top" width="18%"><div align="right"><strong>Observações:</strong></div></td>
+            <td width="82%"><div iwtextarea="true" iwiseditable="false" ng-model="variables.iwvar_estgeral_obs" ><button ng-click="javaCall('iwricheditorlauncher', 'iwvar_estgeral_obs')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/icon_edit.png" />Editar</button></div><span ng-bind-html="variables.iwvar_estgeral_obs" ></span></td>
+          </tr>
+        </table>
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#B9C0FF">
+            <td><strong>Tipo de Ferida</strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<input ng-model="variables.iwvar_tpf_ulcpress" type="checkbox" value="on" ><strong>Úlcera de Pressão</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Estágio:</strong>&nbsp;<select ng-model="variables.iwvar_tpf_ulcpress_estag" ><option value="0" selected  >.</option>
+<option value="1" >I</option>
+<option value="2" >II</option>
+<option value="3" >III</option>
+<option value="4" >IV</option>
+</select></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<input ng-model="variables.iwvar_tpf_umi" type="checkbox" value="on" ><strong>Úlcera de Membros Inferiores:</strong><input ng-model="variables.iwvar_tpf_umi_venosa" type="checkbox" value="checkbox" > <strong>Venosa&nbsp;&nbsp;</strong><input ng-model="variables.iwvar_tpf_umi_arterial" type="checkbox" value="checkbox" > <strong>Arterial&nbsp;&nbsp;</strong><input ng-model="variables.iwvar_tpf_umi_diabetica" type="checkbox" value="checkbox" > <strong>Mal Perfurante Planta</strong>r</td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<input ng-model="variables.iwvar_tpf_sutura" type="checkbox" value="checkbox" ><strong>Deiscência de Sutura </strong>&nbsp;</td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<input ng-model="variables.iwvar_tpf_queimad" type="checkbox" value="checkbox" ><strong>Queimadura:</strong>&nbsp;<select ng-model="variables.iwvar_tpf_queimad_grau" ><option value="0" selected  >.</option>
+<option value="1" >1º grau</option>
+<option value="2" >2º grau superficial</option>
+<option value="3" >2º grau profundo</option>
+<option value="4" >3º grau</option>
+</select></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td>&nbsp;<strong>Outros:</strong>&nbsp;<input maxlength="40" size="40" ng-model="variables.iwvar_tpf_descr" type="text" ></td>
+          </tr>
+        </table>
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2" bgcolor="#B9C0FF"><b>Localização da Ferida</b></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2">&nbsp;<strong>Local:</strong>&nbsp;<input maxlength="60" size="40" ng-model="variables.iwvar_ferida_local" type="text" ></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td><div align="right"><strong>Tamanho:</strong></div></td>
+            <td>&nbsp;<input maxlength="5" size="5" ng-model="variables.iwvar_ferida_tamanh" type="text" > &nbsp;<strong>cm</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Profundidade:</strong>&nbsp; <input maxlength="5" size="5" ng-model="variables.iwvar_ferida_profund" type="text" > &nbsp;<strong>cm</strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td valign="top" width="12%"><div align="right"><strong>Túnel:</strong></div></td>
+            <td width="88%"><input ng-model="variables.iwvar_tunel_necr_seca" type="checkbox" value="checkbox" ><strong>Necrose Seca</strong>&nbsp;&nbsp; <input ng-model="variables.iwvar_tunel_necr_liq" type="checkbox" value="checkbox" ><strong>Necrose de Liquefação&nbsp;&nbsp;</strong><input ng-model="variables.iwvar_tunel_granulacao" type="checkbox" value="checkbox" ><strong>Granulação</strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td valign="top" width="12%">&nbsp;</td>
+            <td><input ng-model="variables.iwvar_tunel_esfacelos" type="checkbox" value="checkbox" ><strong>Esfacelos&nbsp;&nbsp;</strong><input ng-model="variables.iwvar_tunel_epitelizacao" type="checkbox" value="checkbox" ><strong>Epitelização&nbsp;&nbsp;</strong><input ng-model="variables.iwvar_tunel_maturacao" type="checkbox" value="checkbox" ><strong>Maturação</strong></td>
+          </tr>
+        </table>
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#F5F5F5">
+            <td colspan="3" bgcolor="#B9C0FF"><b>Exsudato</b></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td colspan="3">&nbsp;<input ng-model="variables.iwvar_exsud" type="checkbox" value="on" ><strong>Presença de Exsudato:</strong>&nbsp;<select ng-model="variables.iwvar_exsud_qtd" ><option value="0" selected  >.</option>
+<option value="1" >pouco</option>
+<option value="2" >moderado</option>
+<option value="3" >abundante</option>
+</select> &nbsp; <input ng-model="variables.iwvar_exsud_purulen" type="checkbox" value="checkbox" > <strong>Purulento</strong>&nbsp;&nbsp; <input ng-model="variables.iwvar_exsud_seroso" type="checkbox" value="checkbox" > <strong>Seroso&nbsp;&nbsp;</strong><input ng-model="variables.iwvar_exsud_sanguin" type="checkbox" value="checkbox" > <strong>Sanguinolento</strong></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td colspan="3">&nbsp;<input ng-model="variables.iwvar_exsud_odor" type="checkbox" value="checkbox" ><strong>Prensença de Odor</strong>&nbsp;</td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td valign="top" width="23%"><div align="right"><strong>Observações:</strong></div></td>
+            <td colspan="2"><div iwtextarea="true" ng-model="variables.iwvar_exsud_obs" ><button ng-click="javaCall('iwricheditorlauncher', 'iwvar_exsud_obs')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/icon_edit.png" />Editar</button></div><span ng-bind-html="variables.iwvar_exsud_obs" ></span></td>
+          </tr>
+        </table>
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#F5F5F5">
+            <td bgcolor="#B9C0FF"><b>Conduta e Síntese da Evolução Clínica</b></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td><div iwtextarea="true" ng-model="variables.iwvar_clinic_descr" ><button ng-click="javaCall('iwricheditorlauncher', 'iwvar_clinic_descr')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/icon_edit.png" />Editar</button></div><span ng-bind-html="variables.iwvar_clinic_descr" ></span></td>
+          </tr>
+        </table>
+        <table width="800px" border="0" cellpadding="0" cellspacing="3" bgcolor="#E4E4E4">
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2" bgcolor="#B9C0FF"><b>Registro Fotográfico</b></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td width="50%"><b>&nbsp;Data Anterior : <input maxlength="12" ng-model="variables.iwvar_data_img_ant" size="7" type="text" style="font-weight:bold;" ><button ng-click="javaCall('iwcalendarlauncher', 'iwvar_data_img_ant')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/JCalendarColor16.gif" /></button> </b></td>
+            <td width="50%"><b>&nbsp;Data Posterior : <input maxlength="12" ng-model="variables.iwvar_data_img_post" size="7" type="text" style="font-weight:bold;" ><button ng-click="javaCall('iwcalendarlauncher', 'iwvar_data_img_post')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/JCalendarColor16.gif" /></button> </b></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td width="50%"><button ng-click="javaCall('iwcameralauncher', 'iwvar_imagem_1')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/insert-image.gif" /></button><br />
+<img ng-src="{{variables.iwvar_imagem_1}}" width="370" height="270" ></td>
+            <td width="50%"><button ng-click="javaCall('iwcameralauncher', 'iwvar_imagem_2')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/insert-image.gif" /></button><br />
+<img ng-src="{{variables.iwvar_imagem_2}}" width="370" height="270" ></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td valign="top" width="50%"><div iwtextarea="true" ng-model="variables.iwvar_comanterior" ><button ng-click="javaCall('iwricheditorlauncher', 'iwvar_comanterior')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/icon_edit.png" />Editar</button></div><span ng-bind-html="variables.iwvar_comanterior" ></span></td>
+            <td valign="top" width="50%"><div iwtextarea="true" ng-model="variables.iwvar_composterior" ><button ng-click="javaCall('iwricheditorlauncher', 'iwvar_composterior')" ><img src="http://iw.iwsoftware.com.br:9093/IwRestAPI/images/icon_edit.png" />Editar</button></div><span ng-bind-html="variables.iwvar_composterior" ></span></td>
+          </tr>
+          <tr bgcolor="#F5F5F5">
+            <td colspan="2" valign="top"><label><br /><img src="http://iw.iwsoftware.com.br:9093/IwEvaluation/GetImageServlet?PROFILE=dbIwHealth&ID=-1" height="80" width="180" /><br /><strong>Tiago </strong><br />CRN : 1236 </label></td>
+          </tr>
+        </table>
+      
+
+    </div>
+
+  </div>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular-sanitize.min.js'></script>
+
+<script>
+
+    (function() {
+
+        var app = angular.module('myApp', ['ngSanitize']);
+
+        app.controller('IwTemplateCtrl', function($scope, $http){
+             
+            // Don't remove or change the line bellow.
+            // It is used as template do inject the real variables Data Model.
+            // The Data Model is a simple json with the pairs (variable name/ variable value).
+            // All values are Strings.
+            // All variable names have the prefix iwvar_
+            // Ex: {Ã¯wvar_eventdate: "10/10/2014", iwvar_quadroclinico:"" ...}
+            $scope.variables = {
+"iwvar_pres_sistolica":"",
+"iwvar_imagem_2":"",
+"iwvar_quadroclinico":"<p> &#160; &#160; &#160; Ddddddddfffff </p>",
+"iwvar_pulsoradial":"",
+"iwvar_imagem_1":"",
+"iwvar_exsud_odor":true,
+"iwvar_tpf_sutura":true,
+"iwvar_tunel_maturacao":false,
+"iwvar_tunel_necr_seca":true,
+"iwvar_aspecto":"0",
+"iwvar_tpf_descr":"",
+"iwvar_eventdate":"10/11/2016",
+"iwvar_freqrepiratoria":"",
+"iwvar_ferida_tamanh":"",
+"iwvar_exsud_qtd":"0",
+"iwvar_ferida_local":"",
+"iwvar_ferida_profund":"",
+"iwvar_tpf_umi_diabetica":false,
+"iwvar_estgeral_obs":"<p> &#160; &#160; &#160; vvvvvv </p>",
+"iwvar_composterior":"<strong>Coment&#225;rios:</strong>&#160;&#160;",
+"iwvar_tpf_ulcpress":true,
+"iwvar_tpf_umi":true,
+"iwvar_data_img_post":"27/10/2015",
+"iwvar_tpf_umi_venosa":true,
+"iwvar_tpf_ulcpress_estag":"0",
+"iwvar_saturacao_o2":"",
+"iwvar_exsud_seroso":false,
+"iwvar_tpf_queimad":true,
+"iwvar_tunel_esfacelos":true,
+"iwvar_clinic_descr":"",
+"iwvar_tpf_queimad_grau":"0",
+"iwvar_rankinghc":"12",
+"iwvar_karnofscky":"0",
+"iwvar_exsud_purulen":false,
+"iwvar_tunel_epitelizacao":false,
+"iwvar_exsud_obs":"",
+"iwvar_tunel_necr_liq":false,
+"iwvar_data_img_ant":"27/10/2015",
+"iwvar_eventtime_end":"10:30",
+"iwvar_exsud":true,
+"iwvar_tunel_granulacao":false,
+"iwvar_exsud_sanguin":false,
+"iwvar_tpf_umi_arterial":false,
+"iwvar_pres_diastolica":"",
+"iwvar_temperatura":"",
+"iwvar_eventtime_ini":"10:00",
+"iwvar_comanterior":"<strong>Coment&#225;rios:</strong>&#160;&#160;"};
+
+            //initial state-Control to avoid duble launch.
+            $scope.flag = false;
+            
+            // this callback is better than other.
+            // It update only result sub set of variables.
+            $scope.callback = function(result) {
+                for (var prop in result) {
+                    if ($scope.variables.hasOwnProperty(prop)) {
+                        $scope.variables[prop] = result[prop];
+                    }
+                }
+                $scope.$apply();
+            };
+
+            $scope.resetFlag = function(result) {
+                $scope.flag = false;
+            };
+
+            $scope.callback_old_funcionou = function(result) {
+                for (var prop in $scope.variables) {
+                    if ($scope.variables.hasOwnProperty(prop)) {
+                        $scope.variables[prop] = result[prop];
+                    }
+                }
+                $scope.$apply();
+                //$scope.variables = result;
+            };
+            
+            $scope.javaCall = function (iwbuttontype, iwvarname) {
+                
+                if ($scope.flag) {
+                    return;
+                } 
+                $scope.flag = true;
+                
+                var win = window;
+                var info = {"iwbuttontype": iwbuttontype, "iwvarname" : iwvarname};               
+                win.javaCodeCaller(info, $scope.variables, $scope.callback);
+                //win.javaCodeCaller(buttonElement, $scope.variables, $scope.callback);
+            };
+            
+            $scope.callPluggedFunction = function(idTemplate, functionName, idPatient) {
+                var httpRequest = $http({
+                    headers: {iwCareHeaderIdle: accessKey},
+                    method: 'POST',
+                    url: '/medicalRecord/evolutions/execPluggedFunction/' + idTemplate + "/" + functionName + "/" + idPatient
+                }).success(function(data, status) {
+                    $scope.variables = data;
+                }).error(function(data, status) {
+                    alert("HTTP Error: " + status);
+                });              
+            };
+            
+            $scope.callConsistencePluggedFunction = function (idTemplate, idPatient) {
+                var httpRequest = $http({
+                    headers: {iwCareHeaderIdle: accessKey},
+                    method: 'POST',
+                    url: '/medicalRecord/evolutions/execConsistencePluggedFunction/' + idTemplate + "/" + idPatient
+                }).success(function(data, status) {
+                    $scope.variables = data;
+                }).error(function(data, status) {
+                    alert("HTTP Error: " + status);
+                });              
+            };
+            
+        });
+
+    })();
+    
+    
+    var getIwVariableValues = function() {
+        
+        var appElement = document.querySelector('[ng-app=myApp]');
+        var scope = angular.element(appElement).scope();
+        return scope.variables;
+        
+        //var scope = angular.element(document.querySelector('#outside')).scope();
+        //return scope.$variables;
+        //    
+        //    scope.$apply(function(){
+        //        scope.msg = 'Superhero';
+        //    })
+    };
+    
+    var getAngularScope = function() {
+        
+        var appElement = document.querySelector('[ng-app=myApp]');
+        return angular.element(appElement).scope();
+        
+        //var scope = angular.element(document.querySelector('#outside')).scope();
+        //return scope.$variables;
+        //    
+        //    scope.$apply(function(){
+        //        scope.msg = 'Superhero';
+        //    })
+    };
+    
+    var setIwVariableValues = function (varMap) {
+        var scope = getAngularScope();
+        scope.$apply(function() {
+            scope.variables = varMap;
+        });
+        scope.$apply();
+    };
+    
+    
+    
+    
+    
+
+</script>
+</body></html>

@@ -9,6 +9,7 @@ package com.iw.iwmobile.comm;
 import com.iw.iwmobile.entities.AccessConfig;
 import com.iw.iwmobile.entities.AccessToken;
 import com.iw.iwmobile.entities.ScheduledVisit;
+import com.iw.iwmobile.extensions._fakeServerResponses.FakeGetEvolutions;
 
 import java.io.IOException;
 import java.util.*;
@@ -236,60 +237,51 @@ public class IwServiceCaller implements IwServiceCallerInterface {
         return null;
     }
 
+
+    // all asynchronous "getEvolutions" points to fake_getEvolutions
     @Override
     public void getEvolutions(ArrayList<Long> evolIdList, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+            new FakeGetEvolutions().execute(callback);
     }
-
-    @Override
-    public Map<String, MobRecordset> getEvolutions(ArrayList<Long> evolIdList) throws IwCommException {
-        return null;
-    }
-
     @Override
     public void getEvolutions(long idAdmission, long idTemplate, int regType, Date startDate, Date endDate, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        new FakeGetEvolutions().execute(callback);
     }
-
     @Override
     public void getHtml4SummerNote(IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        new FakeGetEvolutions().execute(callback);
+    }
+    @Override
+    public void getIwTemplateByIdText(long idTemplate, long idText, long idAdmission, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
+        new FakeGetEvolutions().execute(callback);
+    }
+    @Override
+    public void getMySchedule(Date dRef, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
+        new FakeGetEvolutions().execute(callback);
+    }
+    @Override
+    public void getMySchedule(Date dRef1, Date dRef2, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
+        new FakeGetEvolutions().execute(callback);
     }
 
     @Override
     public Map<String, MobRecordset> getHtml4SummerNote() throws IwCommException {
         return null;
     }
-
-    @Override
-    public void getIwTemplateByIdText(long idTemplate, long idText, long idAdmission, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
-    }
-
     @Override
     public Map<String, MobRecordset> getIwTemplateByIdText(long idTemplate, long idText, long idAdmission) throws IwCommException {
         return null;
     }
-
-    @Override
-    public void getMySchedule(Date dRef, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
-    }
-
-    @Override
-    public void getMySchedule(Date dRef1, Date dRef2, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
-    }
-
     @Override
     public Map<String, MobRecordset> getMySchedule(Date dRef) throws IwCommException {
         return null;
     }
-
     @Override
     public Map<String, MobRecordset> getMySchedule(Date dRef1, Date dRef2) throws IwCommException {
         return null;
     }
+
+
 
     @Override
     public void getProfShifts(Long idProfessional, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {

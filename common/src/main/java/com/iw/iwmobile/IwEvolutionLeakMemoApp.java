@@ -11,6 +11,7 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.GridLayout;
 import com.codename1.webserver.WebServer;
+import com.iw.iwmobile.extensions.evolution.IwFormEvolutionNavig;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -76,29 +77,30 @@ public class IwEvolutionLeakMemoApp extends Lifecycle {
         file.delete();
     }
 
-//    public void runApp_old() {
+//    public void runApp_standard() {
 //        Form hi = new Form("Hi World", BoxLayout.y());
 //
 //        Button helloButton = new Button("Hello World");
 //        hi.add(helloButton);
-//
-//        BrowserComponent browser = new BrowserComponent();
-//        browser.setPage("http:8888/index.html", null);
-//        hi.add(browser);
-//
 //        helloButton.addActionListener(e -> hello());
 //        hi.getToolbar().addMaterialCommandToSideMenu("Hello Command",
 //        FontImage.MATERIAL_CHECK, 4, e -> hello());
 //        hi.show();
 //    }
 
+//    @Override
+//    public void runApp() {
+//        Form hi = new Form("Hi World", new GridLayout(2,1));
+//        BrowserComponent browser = new BrowserComponent();
+//        hi.add(browser);
+//        hi.add(createHelloButton(browser));
+//        hi.show();
+//    }
+
     @Override
     public void runApp() {
-        Form hi = new Form("Hi World", new GridLayout(2,1));
-        BrowserComponent browser = new BrowserComponent();
-        hi.add(browser);
-        hi.add(createHelloButton(browser));
-        hi.show();
+        Form f = new IwFormEvolutionNavig("898", "INCOWAY T", false, true, 1);
+        f.show();
     }
 
     private Button createHelloButton (BrowserComponent bc) {

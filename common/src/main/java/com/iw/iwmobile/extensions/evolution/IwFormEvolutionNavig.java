@@ -44,11 +44,7 @@ public class IwFormEvolutionNavig extends IwFormBase {
     Date dateMin;
     //private MultiList mlEvolutions;
     private Button btSearch;
-    private Button btSummary;
     private Button btAdd;
-    private Button btEdit;
-    private Button btView;
-    private IwSettingsButton btSettings;
     private boolean hideSummary = false;
     private boolean evolEditable = false; // default value 
     private boolean isUserInActiveShift = false;
@@ -136,11 +132,7 @@ public class IwFormEvolutionNavig extends IwFormBase {
         Container southContainer = new Container(new BorderLayout());
         Container southButtons = new Container(new GridLayout(1,5));
         southButtons.addComponent(btSearch);
-        if (!hideSummary){
-            southButtons.addComponent(btSummary);
-        }
         southButtons.addComponent(btAdd);
-        southContainer.addComponent(BorderLayout.CENTER,southButtons);southContainer.addComponent(BorderLayout.EAST,btSettings);
 
         Container c = getContentPane();
         c.setLayout(new BorderLayout());
@@ -242,8 +234,6 @@ public class IwFormEvolutionNavig extends IwFormBase {
             }
             catch (Exception e) {/** do nothing **/}
         }
-        
-        btSettings.repaint();
         
     }
     

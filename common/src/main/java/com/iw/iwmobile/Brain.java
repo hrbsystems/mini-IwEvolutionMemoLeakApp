@@ -24,8 +24,13 @@ package com.iw.iwmobile;
 //import com.codename1.util.DateUtil;
 //import com.codename1.util.MathUtil;
 //import com.codename1.util.StringUtil;
+import com.codename1.io.FileSystemStorage;
+import com.codename1.io.Storage;
+import com.codename1.io.URL;
+import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
+import com.codename1.ui.util.ImageIO;
 import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
 import com.iw.iwmobile._fakelibs.StateMachine;
@@ -34,6 +39,7 @@ import com.iw.iwmobile.entities.*;
 import com.iw.iwmobile.extensions.evolution.IwFormEvolutionNavig;
 //import userclasses.StateMachine;
 
+import javax.swing.plaf.UIResource;
 import java.io.*;
 import java.util.Calendar;
 import java.util.*;
@@ -369,8 +375,14 @@ public  class Brain implements IwConstantsInterface {
 
   public Image getImage(String image_name) {
     //todo
-//    new UIBuilder().getResourceFilePath();
-//    File f = new File(image_name);
+    Image img = null;
+
+//    try {
+//    //  img = Image.createImage(IwEvolutionLeakMemoApp.class.getResource()ResourceAsStream("./image/" + image_name));
+//    }
+//    catch (IOException ioEx) {
+//      System.out.println("Error getting Image from Resources DIR");
+//    }
     return null;
   }
 

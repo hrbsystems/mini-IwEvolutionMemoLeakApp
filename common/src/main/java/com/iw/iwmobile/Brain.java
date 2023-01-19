@@ -375,15 +375,17 @@ public  class Brain implements IwConstantsInterface {
 
   public Image getImage(String image_name) {
     //todo
-    Image img = null;
 
-//    try {
-//    //  img = Image.createImage(IwEvolutionLeakMemoApp.class.getResource()ResourceAsStream("./image/" + image_name));
-//    }
-//    catch (IOException ioEx) {
-//      System.out.println("Error getting Image from Resources DIR");
-//    }
-    return null;
+    InputStream is = IwEvolutionLeakMemoApp.class.getClassLoader().getResourceAsStream("/" + image_name);
+
+    Image img = null;
+    try {
+      img = Image.createImage("/" + image_name);;
+    }
+    catch (IOException ioEx) {
+      System.out.println("Error getting Image from Resources DIR");
+    }
+    return img;
   }
 
   private Form formEvolutionNavigInstance;

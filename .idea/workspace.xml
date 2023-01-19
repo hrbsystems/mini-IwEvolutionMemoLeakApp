@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336d32c5-6f4b-4a8f-b637-9fea310958e7" name="Default Changelist" comment="" />
+    <list default="true" id="336d32c5-6f4b-4a8f-b637-9fea310958e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/Brain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/IwEvolutionLeakMemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/IwEvolutionLeakMemoApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeGetData4AddEvolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeGetData4AddEvolution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeGetEvolutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeGetEvolutions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeGetTemplate424.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeGetTemplate424.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeGetTemplate426.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/1_getEvolutions_898.java-string" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/1_getEvolutions_898.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/2_getData4AddEvolution_898.java-string" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/2_getData4AddEvolution_898.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/3_getTemplate_424.java-string" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/3_getTemplate_424.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/4_getTemplate_426.java-string" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses/4_getTemplate_426.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,17 +69,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses",
+    "last_opened_file_path": "/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/common/src/main/resources",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common/src/main/resources" />
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses" />
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses" />
       <recent name="$PROJECT_DIR$/common/src/main/resources/images" />
       <recent name="$PROJECT_DIR$/common/src/main" />
-      <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/entities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/common/src/main/resources" />
@@ -71,8 +87,8 @@
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.iw.iwmobile.extensions._fakeServerResponses" />
       <recent name="com.iw.iwmobile.extensions._fakeServerResponses.jsonResponses" />
+      <recent name="com.iw.iwmobile.extensions._fakeServerResponses" />
       <recent name="com.iw.iwmobile.forms" />
       <recent name="com.iw.iwmobile" />
       <recent name="com.iw.iwmobile.extensions.evolution" />
@@ -841,7 +857,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/IwEvolutionLeakMemoApp.java</url>
-          <line>111</line>
+          <line>132</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -851,8 +867,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/Brain.java</url>
-          <line>377</line>
+          <line>380</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeGetEvolutions.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeBase.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/FakeBase.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

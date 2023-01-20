@@ -106,19 +106,19 @@ public class IwEvolutionLeakMemoApp extends Lifecycle {
     public void runApp() {
 
         // for tests
-        IwHttpRequesterCallBack<Map<String, MobRecordset>> callback =
-                new IwHttpRequesterCallBack<Map<String,MobRecordset>>() {
-                    @Override
-                    public void onFailure(MobRecordsetError rsError) {
-                        Dialog.show("Alert", rsError.getTranslation(), "OK", null);
-                    }
-
-                    @Override
-                    public void onSuccess(Map<String,MobRecordset> resultMap) {
-                        Dialog.show("Alert", resultMap.toString(), "OK", null);
-                    }
-                };
-        new FakeGetEvolutions().execute(callback);
+//        IwHttpRequesterCallBack<Map<String, MobRecordset>> callback =
+//                new IwHttpRequesterCallBack<Map<String,MobRecordset>>() {
+//                    @Override
+//                    public void onFailure(MobRecordsetError rsError) {
+//                        Dialog.show("Alert", rsError.getTranslation(), "OK", null);
+//                    }
+//
+//                    @Override
+//                    public void onSuccess(Map<String,MobRecordset> resultMap) {
+//                        Dialog.show("Alert", resultMap.toString(), "OK", null);
+//                    }
+//                };
+//        new FakeGetEvolutions().execute(callback);
 
         Form f = new IwFormEvolutionNavig("898", "INCOWAY T", false, true, 1);
         f.show();

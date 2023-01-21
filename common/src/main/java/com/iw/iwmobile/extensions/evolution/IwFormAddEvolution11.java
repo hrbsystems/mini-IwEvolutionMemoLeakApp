@@ -58,7 +58,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
     CheckBox  chkCanceledConsult2;
         
     protected Button btnSave;
-    protected Button btnCheckin;
+//    protected Button btnCheckin;
     Label  lblFeedback;
     
     IwWebBrowser1 webBrowser;
@@ -251,16 +251,11 @@ public class IwFormAddEvolution11 extends IwFormBase {
         southWest = new Container(new FlowLayout(LEFT));
         southWest.addComponent(new Label(" "));
         southWest.addComponent(btnSave);
-        
-        southEast = new Container(new FlowLayout(RIGHT));
-        southEast.addComponent(new IwSettingsButton());
-        southEast.addComponent(btnCheckin);        
-        
+
         south = new Container(new BorderLayout());
         south.addComponent(BorderLayout.WEST, southWest);
         south.addComponent(BorderLayout.CENTER, lblFeedback);
-        south.addComponent(BorderLayout.EAST,southEast);
-        
+
         Container c = getContentPane();
         c.setLayout(new BorderLayout());
         c.addComponent(BorderLayout.CENTER, center);
@@ -287,8 +282,8 @@ public class IwFormAddEvolution11 extends IwFormBase {
 
             @Override
             public void onSuccess(Map<String,MobRecordset> resultMap) {
-                
-                // resultMap contains 4 mobRecordsets:    
+
+                // resultMap must contain this 4 mobRecordsets:
                 // rsTemplates
                 // rsProgrammedConsults
                 // rsPlannedConsults
@@ -524,26 +519,6 @@ public class IwFormAddEvolution11 extends IwFormBase {
     }
     
     private void updateBtnCheckinState(Map<String,MobRecordset> resultMap) {
-        
-        String patGeoLoc = getGeoLocationPatient(resultMap);
-        
-        MobRecordset rsProfCheckInInfo = resultMap.get("rsProfCheckInInfo");
-        for (MobRow r : rsProfCheckInInfo.rows) {
-             MobField f = r.fields.get(0);
-             if (patGeoLoc != null
-                 && (!"".equals(patGeoLoc.trim()))
-                 && ("PROF_NEED_CHECKIN".equals(f.getName())) ) {
-                 
-                if ("1".equals(f.getValue())) {
-                     btnCheckin.setVisible(true);
-                }
-                else {
-                     btnCheckin.setVisible(false);
-                }
-                
-            }
-        }
-        
     }
     
     private void updateFormComponents(Map<String,MobRecordset> resultMap) {
@@ -1087,13 +1062,13 @@ public class IwFormAddEvolution11 extends IwFormBase {
             public void actionPerformed(ActionEvent evt) {
                 
                 if (((Template)cmbTemplate.getSelectedItem()).id == -1L) {
-                    String msg = "Nenhum Template selecionado";
+                    String msg = "No Template selected";
                     Dialog.show("Erro", msg, "OK", null);
                     return;
                 }
                 
                 if (!((IwWebBrowser1)webBrowser).isReady()) {
-                    String msg = "Carregamento conteúdo...";
+                    String msg = "Loading ...";
                     Dialog.show("Mensagem", msg, "OK", null);
                     return;
                 }
@@ -1103,7 +1078,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
                     ConsultType consultType = accrConsultType.getSelectedItem();
                     if ( consultType.id == consult_Programmed.id) {
                         if (accrProgConsult.getSelectedItems().isEmpty()) {
-                            String msg = "Selecione ao menos uma consulta programada";
+                            String msg = "Select at least 1 programmed consult";
                             Dialog.show("Erro", msg, "OK", null);
                             btn.setEnabled(true);
                             return; 
@@ -1111,7 +1086,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
                     }
                     if (consultType.id == consult_NotProgrammed.id) {
                         if (accrPlanConsult.getSelectedItems().isEmpty()) {
-                            String msg = "Selecione ao menos uma consulta planejada";
+                            String msg = "Select at least 1 planned consult";
                             Dialog.show("Erro", msg, "OK", null);
                             btn.setEnabled(true);
                             return; 
@@ -1119,7 +1094,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
                     }
                     if (consultType.id == consult_StandAlone.id) {
                         if (accrVisitReason.getSelectedItem() == null) {
-                            String msg = "Selecione motivo da Consulta avulsa";
+                            String msg = "Select the reason of standalone consult";
                             Dialog.show("Erro", msg, "OK", null);
                             btn.setEnabled(true);
                             return; 
@@ -1694,12 +1669,12 @@ public class IwFormAddEvolution11 extends IwFormBase {
         return accr;
     }
     
-    final String TT_NO_SELETION_TAMPLATE_TEXT = "Carregando Templates...";
+    final String TT_NO_SELECTION_TEMPLATE_TEXT = "No Template Selected ...";
     private IwSelectionButton createCmbTemplate1() {
 
         final IwSelectionButton btn = 
             new IwSelectionButton(
-                TT_NO_SELETION_TAMPLATE_TEXT,
+                TT_NO_SELECTION_TEMPLATE_TEXT,
                 getIwTranslation(TT_BACK),
                 this
             );
@@ -1712,7 +1687,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
                 try{
                     Toast.makeText(
                         Brain.getInstance().getContext(),
-                        "Aguarde até inicializar Template...",
+                        "wait til Template be initialized...",
                         Toast.LENGTH_LONG
                     ).show();        
                 }
@@ -1749,7 +1724,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
                         
                         //Dialog dlgLoop = new InfiniteProgress().showInifiniteBlocking();
                         
-                        // Defines visibilite of StartDate and EndDate componenets.
+                        // Defines visibility of StartDate / EndDate components.
                         MobRecordset rsTemplateInfo = resultMap.get("rsTemplateInfo");
                         String varNamesList = rsTemplateInfo.rows.get(0).field("VAR_NAMES_LIST").getValue();
                         if (varNamesList.indexOf("iwvar_eventdate") == -1) {
@@ -1829,7 +1804,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
                     try {
                         Toast.makeText(
                                 Brain.getInstance().getContext(),
-                                "Buscando Template ...",
+                                "Getting Template ...",
                                 Toast.LENGTH_SHORT);
                     }
                     catch (Exception e) {}                    

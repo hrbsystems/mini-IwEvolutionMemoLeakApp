@@ -7,12 +7,20 @@ package com.iw.iwmobile.extensions.evolution;
 
 import com.codename1.components.MultiButton;
 import com.codename1.ui.*;
+import com.codename1.ui.Button;
+import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
+import com.codename1.ui.Image;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.GridLayout;
+import com.codename1.ui.plaf.Border;
+import com.codename1.ui.plaf.RoundBorder;
+import com.codename1.ui.plaf.UIManager;
 import com.iw.iwmobile.Brain;
+import com.iw.iwmobile.IwColorUtil;
 import com.iw.iwmobile._fakelibs.Toast;
 import com.iw.iwmobile.comm.*;
 import com.iw.iwmobile.components.IwButton;
@@ -22,6 +30,9 @@ import com.iw.iwmobile.entities.MessageType;
 import com.iw.iwmobile.entities.Utilities;
 import com.iw.iwmobile.forms.IwFormBase;
 
+import javax.swing.*;
+import javax.swing.border.LineBorder;
+import java.awt.*;
 import java.util.*;
 
 /**
@@ -120,11 +131,11 @@ public class IwFormEvolutionNavig extends IwFormBase {
     private void init() {
         // define container for buttons
         Container southContainer = new Container(new BorderLayout());
-            Container southButtons = new Container(new GridLayout(1,5));
+            Container southButtons = new Container(new GridLayout(1,2));
                 southButtons.addComponent(btSearch);
-                southButtons.addComponent(new Label("  "));
                 southButtons.addComponent(btAdd);
         southContainer.addComponent(BorderLayout.CENTER,southButtons);
+        southContainer.getStyle().setBgColor(IwColorUtil.LOW_RED);
 
         // define content container
         Container c = getContentPane();
@@ -324,10 +335,22 @@ public class IwFormEvolutionNavig extends IwFormBase {
     
     private Button create_btSearch() {
         
-        Image searchImg =
-            Brain.getInstance().getImage(Brain.IMAGE_SEARCH_ENABLED);
-        
-        Button btn = new IwButton();
+//        Image searchImg =
+//            Brain.getInstance().getImage(Brain.IMAGE_SEARCH_ENABLED);
+//
+//        Button btn = new IwButton();
+        com.codename1.ui.plaf.Style myStyle = UIManager.getInstance().getComponentStyle("Button");
+        myStyle.setBgColor(IwColorUtil.GREEN);
+        myStyle.setFgColor(IwColorUtil.BLACK);
+        myStyle.setBorder(RoundBorder.createLineBorder(5));
+        Image searchImg = FontImage.createMaterial(FontImage.MATERIAL_SEARCH,myStyle).scaledWidth(100);
+//        Image addImg =
+//            Brain.getInstance().getImage(Brain.IMAGE_ADD_ENABLED);
+
+        Button btn = new IwButton(); //TT_ADD
+
+
+
         btn.setIcon(searchImg);
         btn.setVisible(true); // Initial state
         btn.addActionListener(new ActionListener() {
@@ -340,12 +363,16 @@ public class IwFormEvolutionNavig extends IwFormBase {
     } 
 
     private Button create_btAdd() {
-        
-        Image addImg =
-            Brain.getInstance().getImage(Brain.IMAGE_ADD_ENABLED);
+        com.codename1.ui.plaf.Style myStyle = UIManager.getInstance().getComponentStyle("Button");
+        myStyle.setBgColor(IwColorUtil.GREEN);
+        myStyle.setFgColor(IwColorUtil.BLACK);
+        myStyle.setBorder(RoundBorder.createLineBorder(5));
+        Image img = FontImage.createMaterial(FontImage.MATERIAL_ADD,myStyle).scaledWidth(100);
+//        Image addImg =
+//            Brain.getInstance().getImage(Brain.IMAGE_ADD_ENABLED);
         
         Button btn = new IwButton(); //TT_ADD
-        btn.setIcon(addImg);
+        btn.setIcon(img);
         btn.setVisible(true); // Initial state
         btn.addActionListener(new ActionListener() {
             @Override

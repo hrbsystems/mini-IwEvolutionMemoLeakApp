@@ -42,8 +42,8 @@ public interface IwConstantsInterface {
     final static public String TT_ADD = "TT_Add";
     final static public String TT_VIEW = "TT_View";
     final static public String TT_SUMMARY = "TT_Summary";
-    final static public String TT_ADD_EVOLUTION = "TT_Add_Evoulution";
-    final static public String TT_ADD_EVOLUTION_OFFLINE = "TT_Add_Evoulution_Offline";
+    final static public String TT_ADD_EVOLUTION = "TT_Add_Evolution";
+    final static public String TT_ADD_EVOLUTION_OFFLINE = "TT_Add_Evolution_Offline";
     final static public String TT_SAVE = "TT_Save";
     final static public String TT_HEADER = "TT_Header";
     final static public String TT_TEMPLATE = "TT_TEMPLATE";

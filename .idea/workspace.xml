@@ -7,7 +7,7 @@
     <list default="true" id="336d32c5-6f4b-4a8f-b637-9fea310958e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/Brain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/comm/IwServiceCaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/comm/IwServiceCaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/IwConstantsInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/IwConstantsInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormAddEvolution11.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormAddEvolution11.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormEvolutionNavig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormEvolutionNavig.java" afterDir="false" />
     </list>
@@ -58,6 +58,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/common/src/main/resources",
     "settings.editor.selected.configurable": "preferences.pluginManager"

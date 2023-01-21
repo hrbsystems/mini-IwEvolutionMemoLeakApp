@@ -36,6 +36,7 @@ import com.codename1.ui.util.UIBuilder;
 import com.iw.iwmobile._fakelibs.StateMachine;
 import com.iw.iwmobile.comm.*;
 import com.iw.iwmobile.entities.*;
+import com.iw.iwmobile.extensions.evolution.IwFormAddEvolution11;
 import com.iw.iwmobile.extensions.evolution.IwFormEvolutionNavig;
 //import userclasses.StateMachine;
 
@@ -228,7 +229,19 @@ public  class Brain implements IwConstantsInterface {
   static HashMap<String,String> translationMap = new HashMap<String, String>(){};
   static{
     translationMap.put("TT_Evolutions_abbreviated", "Evols");
+    translationMap.put("TT_Retroactive_Registry", "Retroactive Registry");
+    translationMap.put("TT_Choose_Speciality", "Choose Speciality");
+    translationMap.put("TT_Choose_Consult_Type", "Choose Consult Type");
+    translationMap.put("TT_Choose_Consult_Plan", "Choose Consult Plan");
+    translationMap.put("TT_Canceled_Consult", "Canceled Consult");
+    translationMap.put("TT_Not_Programmed", "Not Programmed Consult");
 
+    translationMap.put("TT_EVALUATION", "Evaluation");
+    translationMap.put("TT_STANDALONE", "Standalone");
+    translationMap.put("TT_PROGRAMMED", "Programmed");
+    translationMap.put("TT_INFO_REG", "Info Registration");
+    translationMap.put("TT_NOT_PROGRAMMED", "Not Programmed");
+    translationMap.put("TT_Add_Evolution", "Add Evolution");
   }
   @Override
   public String getIwTranslation(String token) {

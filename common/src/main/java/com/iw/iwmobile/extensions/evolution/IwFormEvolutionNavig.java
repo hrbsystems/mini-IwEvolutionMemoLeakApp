@@ -11,27 +11,18 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.GridLayout;
-import com.codename1.ui.list.DefaultListModel;
-import com.codename1.ui.list.ListModel;
-import com.codename1.ui.list.MultiList;
 import com.iw.iwmobile.Brain;
-//import com.iw.iwmobile.IwGlobalSecurity;
+import com.iw.iwmobile._fakelibs.Toast;
 import com.iw.iwmobile.comm.*;
-import com.iw.iwmobile.components.*;
+import com.iw.iwmobile.components.IwButton;
 import com.iw.iwmobile.entities.Message;
 import com.iw.iwmobile.entities.MessageOption;
 import com.iw.iwmobile.entities.MessageType;
 import com.iw.iwmobile.entities.Utilities;
-//import com.iw.iwmobile.extensions.evolution.IwFormEvolutionConsult;
 import com.iw.iwmobile.forms.IwFormBase;
-//import com.iw.iwmobile.forms.IwFormSummaryRecord;
-//import com.pmovil.toast.Toast;
-import com.iw.iwmobile._fakelibs.Toast;
-import java.util.*;
 
-import static com.iw.iwmobile.forms.IwFormBase.TT_MSG_NO_RECORDS;
+import java.util.*;
 
 /**
  *
@@ -127,17 +118,20 @@ public class IwFormEvolutionNavig extends IwFormBase {
 
     
     private void init() {
-        FlowLayout layout = new FlowLayout(CENTER);
-
+        // define container for buttons
         Container southContainer = new Container(new BorderLayout());
-        Container southButtons = new Container(new GridLayout(1,5));
-        southButtons.addComponent(btSearch);
-        southButtons.addComponent(btAdd);
+            Container southButtons = new Container(new GridLayout(1,5));
+                southButtons.addComponent(btSearch);
+                southButtons.addComponent(new Label("  "));
+                southButtons.addComponent(btAdd);
+        southContainer.addComponent(BorderLayout.CENTER,southButtons);
 
+        // define content container
         Container c = getContentPane();
-        c.setLayout(new BorderLayout());
-        Container cList = new Container(new BoxLayout(BoxLayout.Y_AXIS)); 
-        cList.setScrollableY(true);
+            c.setLayout(new BorderLayout());
+            Container cList = new Container(new BoxLayout(BoxLayout.Y_AXIS));
+            cList.setScrollableY(true);
+
         c.addComponent(BorderLayout.CENTER, cList);
         c.addComponent(BorderLayout.SOUTH, southContainer);
     }
@@ -161,9 +155,7 @@ public class IwFormEvolutionNavig extends IwFormBase {
             @Override
             public void onSuccess(Map<String,MobRecordset> resultMap) {
                 my_resultMap = resultMap;
-                //ListModel model = createEvolutionsListModel(resultMap);
-                //mlEvolutions.setModel(model);
-                
+
                 Container cList = createMultiButtonList(resultMap);
                 getContentPane().addComponent(BorderLayout.CENTER, cList);
                 
@@ -182,59 +174,12 @@ public class IwFormEvolutionNavig extends IwFormBase {
                     }
                 }
                 updateButtonsState();
-                
                 getContentPane().forceRevalidate();
             }
         };
 
         btSearch.setEnabled(false);
-        if (rsFilter!=null){
-            Long IDTemplate = (Long)rsFilter.rows.get(0).field("IDTemplate").objValue();
-            if (IDTemplate==null) IDTemplate = -1L;
-            Integer RegistryType = (Integer)rsFilter.rows.get(0).field("RegistryType").objValue();
-            if (RegistryType==null) RegistryType = -1;
-            
-            Date startDate = (Date)rsFilter.rows.get(0).field("StartDate").objValue();
-            Date endDate = (Date)rsFilter.rows.get(0).field("endDate").objValue();
-            
-            caller.getEvolutions(idAdmission, IDTemplate.longValue(), RegistryType.intValue(), 
-                    startDate, endDate,callback);
-        }
-        else if (this.dateMin!=null){ //restricted search to limit a dateMin result
-            if (this.regType>-1){
-                caller.getEvolutions(this.idAdmission, dateMin, regType, callback);
-            }
-            else{
-                caller.getEvolutions(this.idAdmission, dateMin, callback);
-            }
-        }
-        else{
-            if (this.regType>-1){
-                caller.getEvolutions(this.idAdmission, regType, callback);
-            }
-            else{
-                caller.getEvolutions(this.idAdmission, callback);
-            }
-        }
-        if (Brain.getInstance().isOnlineMode()) {
-            try{
-            Toast.makeText(
-                Brain.getInstance().getContext(),
-                "Buscando Dados Servidor ...",
-                Toast.LENGTH_LONG).show();        
-            }
-            catch (Exception e) {/** do nothing **/}
-        }
-        else {
-            try{
-            Toast.makeText(
-                Brain.getInstance().getContext(),
-                "Dados Buscados do Cache ...",
-                Toast.LENGTH_LONG).show();        
-            }
-            catch (Exception e) {/** do nothing **/}
-        }
-        
+        caller.getEvolutions(this.idAdmission, callback);
     }
     
     private TreeMap<String,HashMap> tmEvolutions = new TreeMap<>();

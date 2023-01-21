@@ -225,8 +225,16 @@ public  class Brain implements IwConstantsInterface {
     return "";
   };
 
+  static HashMap<String,String> translationMap = new HashMap<String, String>(){};
+  static{
+    translationMap.put("TT_Evolutions_abbreviated", "Evols");
+
+  }
   @Override
   public String getIwTranslation(String token) {
+    if (translationMap.containsKey(token)) {
+      return translationMap.get(token);
+    }
     return token;
   }
 

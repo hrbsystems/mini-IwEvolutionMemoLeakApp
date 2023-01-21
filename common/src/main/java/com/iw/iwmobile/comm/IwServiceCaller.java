@@ -9,7 +9,7 @@ package com.iw.iwmobile.comm;
 import com.iw.iwmobile.entities.AccessConfig;
 import com.iw.iwmobile.entities.AccessToken;
 import com.iw.iwmobile.entities.ScheduledVisit;
-import com.iw.iwmobile.extensions._fakeServerResponses.FakeGetEvolutions;
+import com.iw.iwmobile.extensions._fakeServerResponses.*;
 
 import java.io.IOException;
 import java.util.*;
@@ -29,12 +29,13 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public Map<String, MobRecordset> addEvolution(int consultType, Date startDate, Date endDate, long idAdmission, long idTemplate, long idText, String tableName, int persistType, int skipGenConsult, long idSpeciality, String specialityName, int additionalReason, String additionalReasonTx, int canceledConsult1, int canceledConsult2, ArrayList<Long> consultSelectedList1, Date programmedStart, ArrayList<Long> consultSelectedList2, long idCampaignItem, long idCapAdmProfCheckin, HashMap<String, String> hmVariables, ArrayList<String> imageVarNameList, ArrayList<String> pdfVarNameList) throws IwCommException, IOException {
-        return null;
+        Map<String, MobRecordset> fakeResp = new HashMap<String, MobRecordset>(){};
+        //todo insert data here for a fake evolution saved successful
+        return fakeResp;
     }
 
     @Override
     public void clearCache(IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
@@ -44,7 +45,8 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void execConsistPluggedFunctionAsync(String idText, String idTemplate, String idPatient, String idAdmission, HashMap<String, String> variableMap, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        MobRecordsetError rsError = new MobRecordsetError(-1,-1, "can't execute consistence function", "função de consistencia não acessível");
+        callback.onFailure(rsError);
     }
 
     @Override
@@ -54,7 +56,8 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void execIwService(String projectName, String className, String serviceName, Map<String, Object> pMap, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        MobRecordsetError rsError = new MobRecordsetError(-1,-1, "iw-service not available: " + serviceName, "serviço-iw não disponível");
+        callback.onFailure(rsError);
     }
 
     @Override
@@ -69,12 +72,14 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void execPluggedFunction(long idTemplate, String funcName, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        MobRecordsetError rsError = new MobRecordsetError(-1,-1,"iw-plugged-function not available", "função-plugada não disponível");
+        callback.onFailure(rsError);
     }
 
     @Override
     public void execPluggedFunctionAsync(String idText, String idTemplate, String funcName, String idPatient, String idAdmission, HashMap<String, String> variableMap, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        MobRecordsetError rsError = new MobRecordsetError(-1,-1,"iw-plugged-function not available", "função-plugada não disponível");
+        callback.onFailure(rsError);
     }
 
     @Override
@@ -184,7 +189,7 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getData4FormAddEvolution(long idAdmission, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        new FakeGetData4AddEvolution().execute(callback);
     }
 
     @Override
@@ -194,12 +199,17 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getData4FormEditEvolution(long idEvolution, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        MobRecordsetError rsError = new MobRecordsetError(
+                -1,
+                -1,
+                "iw-service to get data for edit evolution not available",
+                "serviço-iw para obter dados para edição de evolução não disponível");
+        callback.onFailure(rsError);
     }
 
     @Override
     public void getEvolutions(long idAdmission, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        new FakeGetEvolutions().execute(callback);
     }
 
     @Override
@@ -209,7 +219,7 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getEvolutions(long idAdmission, Date dateMin, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        new FakeGetEvolutions().execute(callback);
     }
 
     @Override
@@ -219,7 +229,7 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getEvolutions(long idAdmission, int regtype, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        new FakeGetEvolutions().execute(callback);
     }
 
     @Override
@@ -229,7 +239,7 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getEvolutions(long idAdmission, Date dateMin, int regtype, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
+        new FakeGetEvolutions().execute(callback);
     }
 
     @Override
@@ -241,7 +251,7 @@ public class IwServiceCaller implements IwServiceCallerInterface {
     // all asynchronous "getEvolutions" points to fake_getEvolutions
     @Override
     public void getEvolutions(ArrayList<Long> evolIdList, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-            new FakeGetEvolutions().execute(callback);
+        new FakeGetEvolutions().execute(callback);
     }
 
     @Override
@@ -255,19 +265,23 @@ public class IwServiceCaller implements IwServiceCallerInterface {
     }
     @Override
     public void getHtml4SummerNote(IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-        new FakeGetEvolutions().execute(callback);
     }
     @Override
     public void getIwTemplateByIdText(long idTemplate, long idText, long idAdmission, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-        new FakeGetEvolutions().execute(callback);
+        if (idTemplate == 424) {
+            new FakeGetTemplate424().execute(callback);
+        } else if (idTemplate == 426) {
+            new FakeGetTemplate426().execute(callback);
+        } else {
+            MobRecordsetError rsError = new MobRecordsetError(-1,-1, "tamplate not exist", "template não existe");
+            callback.onFailure(rsError);
+        }
     }
     @Override
     public void getMySchedule(Date dRef, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-        new FakeGetEvolutions().execute(callback);
     }
     @Override
     public void getMySchedule(Date dRef1, Date dRef2, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-        new FakeGetEvolutions().execute(callback);
     }
 
     @Override
@@ -291,7 +305,6 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getProfShifts(Long idProfessional, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
@@ -306,22 +319,18 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getPrescriptions(long idAdmission, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
     public void getPrescriptions(ArrayList<Long> prescIdList, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
     public void getReports(IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
     public void getSummarySheet(long idAdmission, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
@@ -331,7 +340,6 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getSummarySheetIndirect_test(long idAdmission, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
@@ -356,7 +364,6 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void setDebugOn(IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
@@ -406,7 +413,6 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getMedicamentUse(long idPatient, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
@@ -416,7 +422,6 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getPatientDiagnostics(long idPatient, IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
-
     }
 
     @Override
@@ -431,7 +436,6 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
     @Override
     public void getScheduledVisits(long idProf, IwHttpRequesterCallBack<ArrayList<ScheduledVisit>> callback) {
-
     }
 
     @Override

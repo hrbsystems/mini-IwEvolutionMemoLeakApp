@@ -106,9 +106,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
         lblEndDate = createLblEndDate();
         pckStartDate = createPckStartDate();
         pckEndDate   = createPckEndDate();
-        //pckStartTime = createPckStartTime();
-        //pckEndTime   = createPckEndTime();
-        
+
         cmbTemplate = createCmbTemplate1();
         accrConsultType = createAccrConsultType();
         chkSkipGenConsult = createChkSkipGenConsult();

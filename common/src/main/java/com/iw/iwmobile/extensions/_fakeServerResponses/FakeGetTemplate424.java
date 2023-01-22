@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class FakeGetTemplate424 extends FakeBase {
 
-    private final String RESOURCE_NAME = "/4_getTemplate_424.json";
+    private final String RESOURCE_NAME = "/3_getTemplate_424.json";
     public void execute(IwHttpRequesterCallBack<Map<String, MobRecordset>> callback) {
         String jsonResp = loadMockedJsonResponseFromResources(RESOURCE_NAME);
         Map<String,MobRecordset> result = createResult(jsonResp);

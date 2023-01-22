@@ -1717,6 +1717,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
                     @Override
                     public void onFailure(MobRecordsetError rsError) {
                         Dialog.show("Alert", rsError.getTranslation(), "OK", null);
+                        cmbTemplate.setSelectedItem(null);
                     }
 
                     @Override

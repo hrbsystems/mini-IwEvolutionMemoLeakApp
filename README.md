@@ -29,8 +29,14 @@ IwFormEvolutionNavig. Pressing the button "+" the second form (IwFormAddEvolutio
 is launched. This second form allows us to launch the third one (IwFormAddEvolution21).
 The last one we can save, finishing one cycle.
 
-Only you should do is execute the project. It was coded to provide automatically
-the first form as the first screen.
+>Only what you should do is execute the project. It was coded to provide automatically
+the first form. This first form offer a way to access the second
+one and the second allows you to reach the third one.  
+
+The slide below illustrates this flow: 
+
+
+
 
 
 

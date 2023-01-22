@@ -242,8 +242,8 @@ public  class Brain implements IwConstantsInterface {
     translationMap.put("TT_INFO_REG", "Info Registration");
     translationMap.put("TT_NOT_PROGRAMMED", "Not Programmed");
     translationMap.put("TT_Add_Evolution", "Add Evolution");
-    translationMap.put("TT_CONFIRM", "Confirm");
-    translationMap.put("TT_CANCEL", "Cancel");
+    translationMap.put("TT_Confirm", "Confirm");
+    translationMap.put("TT_Cancel", "Cancel");
   }
   @Override
   public String getIwTranslation(String token) {

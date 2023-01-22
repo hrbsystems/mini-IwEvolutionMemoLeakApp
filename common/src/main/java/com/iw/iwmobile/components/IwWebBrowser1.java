@@ -912,116 +912,30 @@ public class IwWebBrowser1
     }
 
     private void launchFormMedicamentUsed(final String varName) {
-
         System.out.println("launchFormMedicamentUsed : " + varName);
-        Dialog.show("Alert","Edit launchFormMedicamentUsed not implemented in mini-version","Ok",null);
-        
+        Dialog.show("Alert","From for Medicament in Used not available in mini-version","Ok",null);
     }
 
     private void launchFormDiagnostic(String varName) {
-
         System.out.println("launchFormDiagnostic : " + varName);
-        
-        String strIdAdmission = getIdAdmission();
-        long idAdmission = -1L;
-        try {
-            idAdmission = Long.parseLong(strIdAdmission);
-        }
-        catch (Exception e) {
-            idAdmission = -1L;
-        }
-        IwExtContext iwCtx = new IwExtContext(idAdmission, "");
-        
-        IwFormDiagnostics f =
-            new IwFormDiagnostics(
-                    iwCtx,
-                    getIwTranslation(TT_DIAGNOSTICS)
-            );        
-        
-        Command backCommand = new Command("Voltar") {
-             @Override
-             public void actionPerformed(ActionEvent ev) {
-                HashMap<String,String> map = new HashMap<String,String>();
-                map.put(varName, f.getHtmlContent());
-                setHtmlVariablesValues(map);                   
-                parentForm.show();
-             } 
-        }; 
-        f.setBackCommand(backCommand);               
-        f.show();
-        
+        Dialog.show("Message", "IwFormDiagnostics not available in mini-app", "Ok", null);
     }
 
     private void launchFormCapAdmission(String varName) {
         System.out.println("launchFormCapAdmission : " + varName);
-        
-        String strIdAdmission = getIdAdmission();
-        long idAdmission = -1L;
-        try {
-            idAdmission = Long.parseLong(strIdAdmission);
-        }
-        catch (Exception e) {
-            idAdmission = -1L;
-        }
-        IwExtContext iwCtx = new IwExtContext(idAdmission, "");
-        
-        IwFormSCDiagnostics f =
-            new IwFormSCDiagnostics(
-                    iwCtx,
-                    getIwTranslation(TT_DIAGNOSTICS)
-            );        
-        
-        Command backCommand = new Command("Voltar") {
-             @Override
-             public void actionPerformed(ActionEvent ev) {
-                HashMap<String,String> map = new HashMap<String,String>();
-                map.put(varName, f.getHtmlContent());
-                setHtmlVariablesValues(map);                   
-                parentForm.show();
-             } 
-        }; 
-        f.setBackCommand(backCommand);               
-        f.show();
-        
+        Dialog.show("Message", "Form for CapAdmission INfo not available in mini-app", "Ok", null);
     }
 
     private void launchFormCapPerson(String varName) {
         System.out.println("launchFormCapPerson : " + varName);
-
-        String strIdAdmission = getIdAdmission();
-        long idAdmission = -1L;
-        try {
-            idAdmission = Long.parseLong(strIdAdmission);
-        }
-        catch (Exception e) {
-            idAdmission = -1L;
-        }
-        IwExtContext iwCtx = new IwExtContext(idAdmission, "");
-        
-        IwFormPatientBasicInfo f =
-            new IwFormPatientBasicInfo(
-                    iwCtx,"Info Paciente"
-            );        
-        
-        Command backCommand = new Command("Voltar") {
-             @Override
-             public void actionPerformed(ActionEvent ev) {
-                HashMap<String,String> map = new HashMap<String,String>();
-                map.put(varName, f.getHtmlContent());
-                setHtmlVariablesValues(map);                   
-                parentForm.show();
-             } 
-        }; 
-        f.setBackCommand(backCommand);               
-        f.show();
-        
+        Dialog.show("Message", "Form IwFormPatientBasicInfo not available in mini-app", "ok", null);
     }
 
     private void launchFormPlainText(String param) {
         System.out.println("launchFormPlainText : " + param);
         Dialog.show(
-                "Mensagem",
-                "Edição Pessoa Física em desenvolvimento.",
+                "Message",
+                "launchFormPlainText not implemented correctly - see launching rich text",
                 "OK",
                 null
         );

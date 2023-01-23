@@ -582,7 +582,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
             accrConsultType.addItem(consult_NotProgrammed);
         }
         
-        // define initial consult type only if has consult type options
+        // define initial consult type only if it has consult type options
         if (accrConsultType.getItems() != null
             && !accrConsultType.getItems().isEmpty()) {
 
@@ -594,11 +594,29 @@ public class IwFormAddEvolution11 extends IwFormBase {
             );
             
         }
-        
-        //this repaint ins't necessary.
-        //It is already called from accrConsultType action listener
-        //repaint(); 
-        
+
+
+        // Mini-app specific initializations:
+        // this avoids codename one team to do actions over the IwFormAddEvolution11.
+        // For simplify the tests executions.
+
+        // Mini-app init 1:
+        // initialise the programmed consult visual component selector = the first programmed consult
+        ArrayList<PlannedConsult> plnConsults = getPlannedConsults(resultMap);
+        if (!plnConsults.isEmpty()) {
+            accrPlanConsult.setSelectedItemIndex(0);
+        }
+
+        // Mini-app init 2:
+        // initialize templates combo-box = template (id = 424 - the bigger one)
+        // the fake data the Mini-app uses will always provide the template 424 inside the templates list
+        for (Template template : templates) {
+            if (template.id == 424) {
+                cmbTemplate.setSelectedItem(template);
+                cmbTemplate.getPostSelectionAction().run();
+            }
+        }
+
     }
     
     private boolean isConsultEvaluationAllowed(Map<String, MobRecordset> map) {
@@ -1187,9 +1205,9 @@ public class IwFormAddEvolution11 extends IwFormBase {
             }
 
             // Changed Order  of some consistences checks
-            // perfomance issues. 
+            // performance issues.
             // Tiago requested.
-            // Step 4 was changed for begining position.
+            // Step 4 was changed for beginning position.
             ////////////////////////////////////////////////////////////////
             //// Step 4: Only for Programmed and Planned Appointments
             //// Ensures at least one appointment selected
@@ -1223,175 +1241,175 @@ public class IwFormAddEvolution11 extends IwFormBase {
             ////////////////////////////////////////////////////////////////
             //// OLD Step 5: Check Eletronic signature
             ////////////////////////////////////////////////////////////////
-            IwDlgSignature dlgSignature = new IwDlgSignature();
-            dlgSignature.show();
-            int userAction = dlgSignature.getUserAction();
-            if (userAction == IwDlgSignature.USER_ACTION_CANCEL) {
-                btn.setEnabled(true);
-                return;
-            }
-            if (userAction == IwDlgSignature.USER_ACTION_CONFIRM) {
-                if (dlgSignature.isPasswordEmpty()) {
-                    btn.setEnabled(true);
-                    return;
-                }
-                if (!dlgSignature.isPasswordChecked()) {
-                    Dialog.show("Erro", dlgSignature.getInfo(), "OK", null);
-                    btn.setEnabled(true);
-                    return;
-                }
-            }
+//            IwDlgSignature dlgSignature = new IwDlgSignature();
+//            dlgSignature.show();
+//            int userAction = dlgSignature.getUserAction();
+//            if (userAction == IwDlgSignature.USER_ACTION_CANCEL) {
+//                btn.setEnabled(true);
+//                return;
+//            }
+//            if (userAction == IwDlgSignature.USER_ACTION_CONFIRM) {
+//                if (dlgSignature.isPasswordEmpty()) {
+//                    btn.setEnabled(true);
+//                    return;
+//                }
+//                if (!dlgSignature.isPasswordChecked()) {
+//                    Dialog.show("Erro", dlgSignature.getInfo(), "OK", null);
+//                    btn.setEnabled(true);
+//                    return;
+//                }
+//            }
 
             ////////////////////////////////////////////////////////////////
             //// Step2: Run Consistence Function if it exists.
             ////////////////////////////////////////////////////////////////
-            Map<String,String> htmlVariables;
-            boolean hasConsistFunction =
-                ((IwWebBrowser1)webBrowser).templateHasConsistFunc();
-
-            // Now always force execution of Consistency
-            // Consistency functions execution service now automatically
-            // execute attribute types verification.
-            // So, it must be executed, even if template doesn't have 
-            // Consist function assigned to it
-            if (false) {  //(!hasConsistFunction) {
-                htmlVariables = 
-                    ((IwWebBrowser1)webBrowser).getHtmlVariableValues(); 
-            }
-            else {
-
-                try{
-
-                    htmlVariables =
-                        ((IwWebBrowser1)webBrowser).execConsistFunction();
-
-                    // Here was coded equivalent logic present in
-                    //IwHtmlEditorPaneNative class (Client Java)
-                    boolean bResp;
-                    if (htmlVariables != null) {
-
-                        String strConsistResultValue = 
-                            htmlVariables
-                                .get(IwWebBrowser1.CTRL_VAR_CONSIST_RESULT);
-
-                        if (strConsistResultValue != null) {
-                            if ("true".equals(strConsistResultValue)) {
-                                bResp = true;
-                            }
-                            else {
-                                bResp = false;
-                            }
-                        }
-                        else {
-                            bResp = true;
-                        }
-
-                        // Set possible changes made by Consist Function
-                        ((IwWebBrowser1)webBrowser)
-                            .setHtmlVariablesValues(htmlVariables);
-
-                    }
-                    else {
-                        bResp = false;
-                    }
-
-                    if (!bResp) {
-
-                        String msgError = 
-                            htmlVariables
-                                .get(IwWebBrowser1.CTRL_VAR_DISPLAY_ERROR);
-                        if (msgError != null) {
-                            Dialog.show("Erro", msgError, "OK", null);
-                        }
-                        else {
-                            String msg = "Consistência acusou erro";
-                            Dialog.show("Erro", msg, "OK", null);
-                        }
-
-                        btn.setEnabled(true);
-                        return; // abbort - Consist function returns false.
-
-                    }
-
-                }
-                catch (Exception e) {
-                    String msg = "Falha Comunicação.Tente novamente";
-                    Dialog.show("Erro", msg, "OK", null);
-                    btn.setEnabled(true);
-                    return; // abbort save process here - Consistence function call failed.
-                }
-
-            }
+//            Map<String,String> htmlVariables;
+//            boolean hasConsistFunction =
+//                ((IwWebBrowser1)webBrowser).templateHasConsistFunc();
+//
+//            // Now always force execution of Consistence
+//            //  functions execution service now automatically
+//            // execute attribute types verification.
+//            // So, it must be executed, even if template doesn't have
+//            // Consist function assigned to it
+//            if (false) {  //(!hasConsistFunction) {
+//                htmlVariables =
+//                    ((IwWebBrowser1)webBrowser).getHtmlVariableValues();
+//            }
+//            else {
+//
+//                try{
+//
+//                    htmlVariables =
+//                        ((IwWebBrowser1)webBrowser).execConsistFunction();
+//
+//                    // Here was coded equivalent logic present in
+//                    //IwHtmlEditorPaneNative class (Client Java)
+//                    boolean bResp;
+//                    if (htmlVariables != null) {
+//
+//                        String strConsistResultValue =
+//                            htmlVariables
+//                                .get(IwWebBrowser1.CTRL_VAR_CONSIST_RESULT);
+//
+//                        if (strConsistResultValue != null) {
+//                            if ("true".equals(strConsistResultValue)) {
+//                                bResp = true;
+//                            }
+//                            else {
+//                                bResp = false;
+//                            }
+//                        }
+//                        else {
+//                            bResp = true;
+//                        }
+//
+//                        // Set possible changes made by Consist Function
+//                        ((IwWebBrowser1)webBrowser)
+//                            .setHtmlVariablesValues(htmlVariables);
+//
+//                    }
+//                    else {
+//                        bResp = false;
+//                    }
+//
+//                    if (!bResp) {
+//
+//                        String msgError =
+//                            htmlVariables
+//                                .get(IwWebBrowser1.CTRL_VAR_DISPLAY_ERROR);
+//                        if (msgError != null) {
+//                            Dialog.show("Erro", msgError, "OK", null);
+//                        }
+//                        else {
+//                            String msg = "Consistência acusou erro";
+//                            Dialog.show("Erro", msg, "OK", null);
+//                        }
+//
+//                        btn.setEnabled(true);
+//                        return; // abbort - Consist function returns false.
+//
+//                    }
+//
+//                }
+//                catch (Exception e) {
+//                    String msg = "Falha Comunicação.Tente novamente";
+//                    Dialog.show("Erro", msg, "OK", null);
+//                    btn.setEnabled(true);
+//                    return; // abbort save process here - Consistence function call failed.
+//                }
+//
+//            }
 
             // Step 3: date Consistences
             // Consists whether StartDate is a future date.
             // Also consists whether endDate is before StartDate
-            Date start_Date;
-            Date end_Date;
-            long start_Time;
-            long end_Time;
-            try {
-                if (!pckStartDate.isVisible()) {
-                    // Obs: When pnlPeriod isn't present indicates that 
-                    // template have eventdate variable.
-                    // So, the start date and end date data are defined  
-                    // using eventdate variable value. 
-                    // Unfortunatelly IWCare Template doesn't define End-Date Variable.
-                    // Instead it defines only one variable "evendate"  and two others variable
-                    // called eventtime_ini and eventtime_end.
-                    // So, this obligates the consult begin and finish in the same day.
-                    String sEventDate    = htmlVariables.get("iwvar_eventdate");
-                    String sEventTimeIni = htmlVariables.get("iwvar_eventtime_ini");
-                    String sEventTimeEnd = htmlVariables.get("iwvar_eventtime_end");
-                    if (sEventTimeEnd == null && sEventTimeIni != null) {
-                        sEventTimeEnd = sEventTimeIni;
-                    }
-                    else if (sEventTimeEnd == null && sEventTimeIni == null) {
-                        sEventTimeIni = sEventTimeEnd = "01:00";
-                    }
-                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-                    String strStartDate = sEventDate + " " + sEventTimeIni;
-                    String strEndDate   = sEventDate + " " + sEventTimeEnd;
-                    start_Date = sdf.parse(strStartDate);
-                    end_Date   = sdf.parse(strEndDate);
-                }
-                else {
-                    start_Date = pckStartDate.getDateTime();
-                    end_Date   = pckEndDate.getDateTime();
-                    //start_Time = pckStartTime.getTime() * 1000;
-                    //end_Time = pckEndTime.getTime() * 1000;
-
-                    //long start = start_Date.getTime() + start_Time;
-                    //long end = end_Date.getTime() + end_Time;
-
-                    //start_Date = new Date(start);
-                    //end_Date = new Date(end);
-                }
-
-
-                long ONE_HOUR = 1000 * 60 * 60; // One Hour (miliseconds)
-                long FIVE_MINUTES = 1000 * 60 * 5; // Five Minutes (Miliseconds)
-                Date now = new Date();
-                if (start_Date.getTime() > now.getTime() + ONE_HOUR + FIVE_MINUTES) {
-                    throw new Exception("Data futura");
-                }
-                if (start_Date.getTime() > end_Date.getTime()) {
-                    throw new Exception("Data Fim anterior ao inicio");
-                }
-
-            }
-            catch (ParseException pe) {
-                String msg = pe.getMessage();
-                Dialog.show("Erro", msg, "OK", null);
-                btn.setEnabled(true);
-                return; 
-            }
-            catch (Exception ex) {
-                String msg = ex.getMessage();
-                Dialog.show("Erro", msg, "OK", null);
-                btn.setEnabled(true);
-                return; 
-            }
+//            Date start_Date;
+//            Date end_Date;
+//            long start_Time;
+//            long end_Time;
+//            try {
+//                if (!pckStartDate.isVisible()) {
+//                    // Obs: When pnlPeriod isn't present indicates that
+//                    // template have eventdate variable.
+//                    // So, the start date and end date data are defined
+//                    // using eventdate variable value.
+//                    // Unfortunatelly IWCare Template doesn't define End-Date Variable.
+//                    // Instead it defines only one variable "evendate"  and two others variable
+//                    // called eventtime_ini and eventtime_end.
+//                    // So, this obligates the consult begin and finish in the same day.
+//                    String sEventDate    = htmlVariables.get("iwvar_eventdate");
+//                    String sEventTimeIni = htmlVariables.get("iwvar_eventtime_ini");
+//                    String sEventTimeEnd = htmlVariables.get("iwvar_eventtime_end");
+//                    if (sEventTimeEnd == null && sEventTimeIni != null) {
+//                        sEventTimeEnd = sEventTimeIni;
+//                    }
+//                    else if (sEventTimeEnd == null && sEventTimeIni == null) {
+//                        sEventTimeIni = sEventTimeEnd = "01:00";
+//                    }
+//                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+//                    String strStartDate = sEventDate + " " + sEventTimeIni;
+//                    String strEndDate   = sEventDate + " " + sEventTimeEnd;
+//                    start_Date = sdf.parse(strStartDate);
+//                    end_Date   = sdf.parse(strEndDate);
+//                }
+//                else {
+//                    start_Date = pckStartDate.getDateTime();
+//                    end_Date   = pckEndDate.getDateTime();
+//                    //start_Time = pckStartTime.getTime() * 1000;
+//                    //end_Time = pckEndTime.getTime() * 1000;
+//
+//                    //long start = start_Date.getTime() + start_Time;
+//                    //long end = end_Date.getTime() + end_Time;
+//
+//                    //start_Date = new Date(start);
+//                    //end_Date = new Date(end);
+//                }
+//
+//
+//                long ONE_HOUR = 1000 * 60 * 60; // One Hour (miliseconds)
+//                long FIVE_MINUTES = 1000 * 60 * 5; // Five Minutes (Miliseconds)
+//                Date now = new Date();
+//                if (start_Date.getTime() > now.getTime() + ONE_HOUR + FIVE_MINUTES) {
+//                    throw new Exception("Data futura");
+//                }
+//                if (start_Date.getTime() > end_Date.getTime()) {
+//                    throw new Exception("Data Fim anterior ao inicio");
+//                }
+//
+//            }
+//            catch (ParseException pe) {
+//                String msg = pe.getMessage();
+//                Dialog.show("Erro", msg, "OK", null);
+//                btn.setEnabled(true);
+//                return;
+//            }
+//            catch (Exception ex) {
+//                String msg = ex.getMessage();
+//                Dialog.show("Erro", msg, "OK", null);
+//                btn.setEnabled(true);
+//                return;
+//            }
 
             ////////////////////////////////////////////////////////////////
             //// Step:6 Call AddEvolution Service
@@ -1475,14 +1493,14 @@ public class IwFormAddEvolution11 extends IwFormBase {
                 final String msg = "Evol:" + strIdEvol + " inserida.";
 
                 //Tiago requested change "Toast_Message" for a "Modal_ Dialog".
-                try {
-                Toast.makeText(
-                    Brain.getInstance().getContext(),
-                    msg,
-                    Toast.LENGTH_LONG).show();
-                }
-                catch (Exception e) {/** do nothing **/}
-                //Dialog.show("Info", msg, "OK", null);
+//                try {
+//                Toast.makeText(
+//                    Brain.getInstance().getContext(),
+//                    msg,
+//                    Toast.LENGTH_LONG).show();
+//                }
+//                catch (Exception e) {/** do nothing **/}
+                Dialog.show("Info", msg, "OK", null);
 
                 Display.getInstance().callSerially(new Runnable() {
                     @Override

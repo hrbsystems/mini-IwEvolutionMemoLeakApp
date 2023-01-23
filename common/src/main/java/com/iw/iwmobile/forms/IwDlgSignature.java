@@ -157,7 +157,7 @@ public class IwDlgSignature extends IwDialogBase {
     }
 
     private Button createBtnCancel() {
-        Button btn = new Button("Cancelar");
+        Button btn = new Button(getIwTranslation(TT_CANCEL));
         btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {

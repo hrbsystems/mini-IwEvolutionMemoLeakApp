@@ -150,6 +150,9 @@ public class IwSelectionButton extends IwButton {
     public void setPostSelectionAction(Runnable task) {
         this.postSelectionThread = task;
     }
+    public Runnable getPostSelectionAction() {
+        return postSelectionThread;
+    }
     
     
 //Esta Classe usa o componente MultiList, o qual começou a apresentar problemas

@@ -197,7 +197,10 @@ public class IwWebBrowser1
 
         HashMap<String,String> htmlVarMap = getHtmlVariableValues();
 
-        HashMap<String,String> resp = getHtmlVariableValues();        
+        // todo verify this in original code - it is wrong initialize resp = getHtmlVariableValues()
+//        HashMap<String,String> resp = getHtmlVariableValues();
+        HashMap<String,String> resp = new HashMap<String, String>();
+
         for (String imgVarName : getImageVarNames()) {
             String localImageUrl = htmlVarMap.get(imgVarName);
             resp.put(imgVarName, myStorage.getScaledImagePath(localImageUrl));

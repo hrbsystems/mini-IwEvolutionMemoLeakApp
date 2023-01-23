@@ -28,9 +28,38 @@ public class IwServiceCaller implements IwServiceCallerInterface {
 
 
     @Override
-    public Map<String, MobRecordset> addEvolution(int consultType, Date startDate, Date endDate, long idAdmission, long idTemplate, long idText, String tableName, int persistType, int skipGenConsult, long idSpeciality, String specialityName, int additionalReason, String additionalReasonTx, int canceledConsult1, int canceledConsult2, ArrayList<Long> consultSelectedList1, Date programmedStart, ArrayList<Long> consultSelectedList2, long idCampaignItem, long idCapAdmProfCheckin, HashMap<String, String> hmVariables, ArrayList<String> imageVarNameList, ArrayList<String> pdfVarNameList) throws IwCommException, IOException {
-        Map<String, MobRecordset> fakeResp = new HashMap<String, MobRecordset>(){};
-        //todo insert data here for a fake evolution saved successful
+    public Map<String, MobRecordset> addEvolution(
+            int consultType,
+            Date startDate,
+            Date endDate,
+            long idAdmission,
+            long idTemplate,
+            long idText,
+            String tableName,
+            int persistType,
+            int skipGenConsult,
+            long idSpeciality,
+            String specialityName,
+            int additionalReason,
+            String additionalReasonTx,
+            int canceledConsult1,
+            int canceledConsult2,
+            ArrayList<Long> consultSelectedList1,
+            Date programmedStart,
+            ArrayList<Long> consultSelectedList2,
+            long idCampaignItem,
+            long idCapAdmProfCheckin,
+            HashMap<String, String> hmVariables,
+            ArrayList<String> imageVarNameList,
+            ArrayList<String> pdfVarNameList) throws IwCommException, IOException {
+
+        MobRecordset fakeMobRecordsetResp = new MobRecordset();
+        MobRow r = new MobRow();
+        MobField f = new MobField("ID", "String", "1234");
+        r.addField(f);
+        fakeMobRecordsetResp.addRow(r);
+        Map<String, MobRecordset> fakeResp = new HashMap<String, MobRecordset>();
+        fakeResp.put("rsAddedEvolution", fakeMobRecordsetResp);
         return fakeResp;
     }
 

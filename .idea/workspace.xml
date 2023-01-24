@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="336d32c5-6f4b-4a8f-b637-9fea310958e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/Brain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/comm/IwServiceCaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/comm/IwServiceCaller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/components/IwSelectionButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/components/IwSelectionButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/IwEvolutionLeakMemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/IwEvolutionLeakMemoApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/components/IwWebBrowser1.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/components/IwWebBrowser1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormAddEvolution11.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormAddEvolution11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/forms/IwDlgSignature.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/forms/IwDlgSignature.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -855,7 +851,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/components/IwWebBrowser1.java</url>
-          <line>937</line>
+          <line>932</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

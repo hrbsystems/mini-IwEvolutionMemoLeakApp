@@ -49,7 +49,7 @@ public class IwEvolutionLeakMemoApp extends Lifecycle {
         }
 
         webServerRootPath = new File("httpdocs").getAbsolutePath();
-        server = new WebServer(webServerRootPath, 8888);
+//        server = new WebServer(webServerRootPath, 8888);
     }
 
     private WebServer server;

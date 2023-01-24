@@ -869,48 +869,43 @@ public class IwWebBrowser1
     private void launchSelPhoto_new(final String varName) {
         
         System.out.println("LaunchSelPhoto_new : " + varName);
-        
-        String varValue = jsVariablesProxy.getAndWait(varName).getValue();
-//        if (varValue.startsWith("http://localhost:8888/")) {
-//            varValue = 
-//                Brain.getInstance().getWebServeRootPath()
-//                + "/"
-//                + varValue.substring("http://localhost:8888/".length());
-//        }
-        varValue = myStorage.getScaledImagePath(varValue);
-
-        System.gc();
-        
-        final IwFormSelectPhoto_new f =
-            new IwFormSelectPhoto_new(
-                varName,
-                varValue
-            );
-
-        Command backCommand = new Command("Voltar") {
-             @Override
-             public void actionPerformed(ActionEvent ev) {
-                 
-                if (f.getUserAction() == f.USER_ACTION_CONFIRM) {
-                    HashMap<String,String> map = new HashMap<String,String>();
-                    String browserImgPath = f.getImageLocalhostUrl();  
-
-                    map.put(varName, browserImgPath);
-                    setHtmlVariablesValues(map);
-                    
-                    myStorage.saveScaledImagePath(
-                        browserImgPath,
-                        f.getScaledImagePath()
-                    );
-                    System.gc();
-                }
-                                 
-                parentForm.showBack();
-                
-             } 
-        }; 
-        f.setBackCommand(backCommand);               
-        f.show();
+        Dialog.show("Alert","Form Select Photo not available in mini-version","Ok",null);
+//
+//        String varValue = jsVariablesProxy.getAndWait(varName).getValue();
+//        varValue = myStorage.getScaledImagePath(varValue);
+//
+//        System.gc();
+//
+//        final IwFormSelectPhoto_new f =
+//            new IwFormSelectPhoto_new(
+//                varName,
+//                varValue
+//            );
+//
+//        Command backCommand = new Command("Voltar") {
+//             @Override
+//             public void actionPerformed(ActionEvent ev) {
+//
+//                if (f.getUserAction() == f.USER_ACTION_CONFIRM) {
+//                    HashMap<String,String> map = new HashMap<String,String>();
+//                    String browserImgPath = f.getImageLocalhostUrl();
+//
+//                    map.put(varName, browserImgPath);
+//                    setHtmlVariablesValues(map);
+//
+//                    myStorage.saveScaledImagePath(
+//                        browserImgPath,
+//                        f.getScaledImagePath()
+//                    );
+//                    System.gc();
+//                }
+//
+//                parentForm.showBack();
+//
+//             }
+//        };
+//        f.setBackCommand(backCommand);
+//        f.show();
      
     }
 

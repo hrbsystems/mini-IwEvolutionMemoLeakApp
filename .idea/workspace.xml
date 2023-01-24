@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="336d32c5-6f4b-4a8f-b637-9fea310958e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +56,17 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/common/src/main/resources",
+    "last_opened_file_path": "/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/docs",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/common/src/main/resources" />
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses/jsonResponses" />
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/_fakeServerResponses" />
       <recent name="$PROJECT_DIR$/common/src/main/resources/images" />
-      <recent name="$PROJECT_DIR$/common/src/main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/common/src/main/resources" />

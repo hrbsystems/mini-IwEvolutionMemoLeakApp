@@ -27,13 +27,20 @@ Each time the cycle finish, something like 200MB are retained.
 The actions that need to be executed is launch the first form
 IwFormEvolutionNavig. Pressing the button "+" the second form (IwFormAddEvolution11) 
 is launched. This second form allows us to launch the third one (IwFormAddEvolution21).
-The last one we can save, finishing one cycle.
+The last one we can save the medical record, finishing one cycle. The first form is shown again  
+allowing the repetition of this cycle how manu times you want.
 
 >Only what you should do is execute the project. It was coded to provide automatically
 the first form. This first form offer a way to access the second
-one and the second allows you to reach the third one.  
+one and the second allows you to reach the third one, and so on.
 
 The slide below illustrates this flow: 
+
+![The Cycle flow](./docs/Cycle-Stepes.png)
+
+As you can see, the execution of the cycle is very simply. It is only press 5 buttons in   
+the sequence shown above in the picture. To get the start point all you need to do is run
+the project (mini-app).
 
 
 

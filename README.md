@@ -63,6 +63,11 @@ As you can see, the execution of the cycle is very simply. It is only press 5 bu
 the sequence shown above in the picture. To get the start point all you need to do is run
 the project (mini-app).
 
+Obs: 09/02/2023
+Tiago informed the problem (memory leak) was already solved by steve, using this repo in current state of the main branch.
+So, the new branch (mocke-webview) that was created do allow a new experiments is no longer necessary. 
+So. The current state of the branch main must be considered the latest useful state.  
+
 
 
 

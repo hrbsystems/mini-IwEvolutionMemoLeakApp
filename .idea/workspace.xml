@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="336d32c5-6f4b-4a8f-b637-9fea310958e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormAddEvolution11.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormAddEvolution11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormAddEvolution21.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/extensions/evolution/IwFormAddEvolution21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,14 +52,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp/common/src/main/java/com/iw/iwmobile/components/mockedComponents&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/helio/Documents/_work/iberwan/hrbsystems-projects/Mini-IwEvolutionLeakMemoApp-project/iwevolutionleakmemoapp",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/common/src/main/java/com/iw/iwmobile/components/mockedComponents" />
@@ -811,20 +809,20 @@
     </configuration>
     <list>
       <item itemvalue="Maven.Android Build" />
-      <item itemvalue="Maven.Codename One Settings" />
-      <item itemvalue="Maven.Cross-platform (JavaSE) Desktop App" />
-      <item itemvalue="Maven.Generate Native Interfaces" />
-      <item itemvalue="Maven.Gradle Android Project" />
-      <item itemvalue="Maven.Javascript Build" />
-      <item itemvalue="Maven.Mac Desktop Build" />
-      <item itemvalue="Maven.Run as Desktop App" />
-      <item itemvalue="Maven.Run in Simulator" />
-      <item itemvalue="Maven.Update Codename One" />
-      <item itemvalue="Maven.Windows Desktop Build" />
-      <item itemvalue="Maven.Windows Device Build (UWP)" />
-      <item itemvalue="Maven.Xcode iOS Project" />
       <item itemvalue="Maven.iOS Debug Build" />
       <item itemvalue="Maven.iOS Release Build" />
+      <item itemvalue="Maven.Javascript Build" />
+      <item itemvalue="Maven.Mac Desktop Build" />
+      <item itemvalue="Maven.Windows Desktop Build" />
+      <item itemvalue="Maven.Windows Device Build (UWP)" />
+      <item itemvalue="Maven.Cross-platform (JavaSE) Desktop App" />
+      <item itemvalue="Maven.Xcode iOS Project" />
+      <item itemvalue="Maven.Gradle Android Project" />
+      <item itemvalue="Maven.Generate Native Interfaces" />
+      <item itemvalue="Maven.Codename One Settings" />
+      <item itemvalue="Maven.Update Codename One" />
+      <item itemvalue="Maven.Run in Simulator" />
+      <item itemvalue="Maven.Run as Desktop App" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

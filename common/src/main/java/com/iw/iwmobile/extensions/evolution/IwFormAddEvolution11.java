@@ -17,7 +17,12 @@ import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.plaf.Border;
 import com.iw.iwmobile.Brain;
 import com.iw.iwmobile.comm.*;
-import com.iw.iwmobile.components.*;
+import com.iw.iwmobile.components.mockedComponents.IwWebBrowser1;
+import com.iw.iwmobile.components.IwDateTimePicker;
+import com.iw.iwmobile.components.IwSelectionButton;
+import com.iw.iwmobile.components.IwAccrComboBox;
+import com.iw.iwmobile.components.IwAccrMultiSelection;
+import com.iw.iwmobile.components.IwButton;
 import com.iw.iwmobile.entities.TDaddEvolutionOffline;
 import com.iw.iwmobile.forms.IwDlgGetPin;
 import com.iw.iwmobile.forms.IwDlgSignature;
@@ -1078,51 +1083,7 @@ public class IwFormAddEvolution11 extends IwFormBase {
         btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                
-                if (((Template)cmbTemplate.getSelectedItem()).id == -1L) {
-                    String msg = "No Template selected";
-                    Dialog.show("Erro", msg, "OK", null);
-                    return;
-                }
-                
-                if (!((IwWebBrowser1)webBrowser).isReady()) {
-                    String msg = "Loading ...";
-                    Dialog.show("Mensagem", msg, "OK", null);
-                    return;
-                }
-                
-                if (Brain.getInstance().isOnlineMode()) {
-
-                    ConsultType consultType = accrConsultType.getSelectedItem();
-                    if ( consultType.id == consult_Programmed.id) {
-                        if (accrProgConsult.getSelectedItems().isEmpty()) {
-                            String msg = "Select at least 1 programmed consult";
-                            Dialog.show("Erro", msg, "OK", null);
-                            btn.setEnabled(true);
-                            return; 
-                        } 
-                    }
-                    if (consultType.id == consult_NotProgrammed.id) {
-                        if (accrPlanConsult.getSelectedItems().isEmpty()) {
-                            String msg = "Select at least 1 planned consult";
-                            Dialog.show("Erro", msg, "OK", null);
-                            btn.setEnabled(true);
-                            return; 
-                        } 
-                    }
-                    if (consultType.id == consult_StandAlone.id) {
-                        if (accrVisitReason.getSelectedItem() == null) {
-                            String msg = "Select the reason of standalone consult";
-                            Dialog.show("Erro", msg, "OK", null);
-                            btn.setEnabled(true);
-                            return; 
-                        } 
-                    }
-                     
-                } 
-                
-                formEditTemplate.show();
-                
+                new IwFormAddEvolution21(idAdmission, null).show();
             }
         });
         return btn;

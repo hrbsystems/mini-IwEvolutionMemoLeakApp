@@ -18,7 +18,7 @@ import com.codename1.ui.plaf.Border;
 import com.codename1.ui.plaf.UIManager;
 import com.iw.iwmobile.Brain;
 import com.iw.iwmobile.components.IwButton;
-import com.iw.iwmobile.components.IwWebBrowser1;
+import com.iw.iwmobile.components.mockedComponents.IwWebBrowser1;
 import com.iw.iwmobile.forms.IwDialogBase;
 import com.iw.iwmobile.forms.IwFormBase;
 import com.iw.iwmobile._fakelibs.Toast;
